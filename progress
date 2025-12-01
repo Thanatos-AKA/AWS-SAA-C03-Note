@@ -1,0 +1,5 @@
+You have created a Route 53 latency record set from your domain to a machine in Northern Virginia and a similar record to a machine in Sydney. When a user located in US visits your domain he will be routed to
+[x] Northern Virginia.
+[ ] Sydney.
+[ ] Both, Northern Virginia and Sydney.
+[ ] Depends on the Weighted Resource Record Sets.

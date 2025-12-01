@@ -724,9 +724,9 @@
 
 ### What is the minimum time interval for the data that Amazon CloudWatch receives and aggregates?
 
-- [ ] One second.
+- [x] One second.
 - [ ] Five seconds.
-- [x] One minute.
+- [ ] One minute.
 - [ ] Three minutes.
 - [ ] Five minutes.
 
@@ -748,6 +748,13 @@
 - [x] Elastic Transcoder to transcode original high-resolution MP4 videos to HLS. S3 to host videos with Lifecycle Management to archive original files to Glacier after a few days. CloudFront to serve HLS transcoded videos from S3.
 - [ ] A video transcoding pipeline running on EC2 using SQS to distribute tasks and Auto Scaling to adjust the number of nodes depending on the length of the queue. S3 to host videos with Lifecycle Management to archive all files to Glacier after a few days. CloudFront to serve HLS transcoded videos from Glacier.
 
+考試技巧： 如果選項同時出現 Elastic Transcoder 和 MediaConvert，通常 MediaConvert 是更好的答案 (功能更強、更現代)。但如果像這題只有 Elastic Transcoder，那就大膽選它。
+"Prevent users from accessing S3 directly" (防止使用者直接存取 S3)	
+Origin Access Identity (OAI)
+
+
+或 Origin Access Control (OAC)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are designing an intrusion detection prevention (IDS/IPS) solution for a customer web application in a single VPC. You are considering the options for implementing IOS IPS protection for traffic coming from the Internet. Which of the following options would you consider? (Choose 2 answers)
@@ -767,6 +774,16 @@
 - [ ] Partially saved objects are immediately readable with a GET after an overwrite PU.
 - [x] S3 provides eventual consistency for overwrite PUTS and DELETE.
 
+現實世界/新考題： 全部都是強一致性 (Strong Consistency)。
+
+為了應付這類題目，請記住以下三個 S3 行為準則：
+
+沒有殘缺： 檔案只有「全有 (100% Uploaded)」或「全無」，沒有一半的。(Atomicity)
+
+新檔案秒看： 上傳新檔案，下一秒就能讀到。(Read-after-write)
+
+舊題庫邏輯 (考試用)： 更改或刪除舊檔案，需要一點時間同步。(Eventual Consistency)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### How can the domain's zone apex, for example, 'myzoneapexdomain.com', be pointed towards an Elastic Load Balancer?
@@ -776,6 +793,18 @@
 - [ ] By using an Amazon Route 53 CNAME record.
 - [ ] By using an A record.
 
+題目關鍵字	正確答案
+
+Zone Apex (Root domain) + Point to AWS Resource (ELB/CloudFront/S3)	Alias Record
+
+example.com (無 www) -> ELB	Alias Record
+
+www.example.com -> ELB	CNAME 或 Alias Record 都可以 (但在 AWS 裡推薦用 Alias 因為免費)
+
+Routing Traffic based on user location (根據用戶位置導流)	Geolocation Routing
+
+Routing Traffic to nearest region (導流到延遲最低/最近的區域)	Latency Routing (關鍵字: best performance, lowest latency)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### When should I choose Provisioned IOPS over Standard RDS storage?
@@ -783,6 +812,14 @@
 - [ ] If you have batch-oriented workloads.
 - [x] If you use production online transaction processing (OLTP) workloads.
 - [ ] If you have workloads that are not sensitive to consistent performance.
+
+硬碟類型	全名	考試關鍵字 / 適用場景
+
+General Purpose SSD	gp2 / gp3	Default (預設選項), Cost-effective, Dev/Test 環境, 中小型資料庫。
+
+Provisioned IOPS SSD	io1 / io2	Critical Business, OLTP, High I/O requirement, Low Latency, Consistent Performance (效能一致性)。
+
+Magnetic (HDD)	Standard	Infrequent access, Legacy (舊系統), 省錢 (現在極少考，除非題目強調極低存取頻率)。
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -792,6 +829,16 @@
 - [ ] Use reduced redundancy storage (RRS) for PDF and .csv data in S3. Add Spot Instances to EMR jobs. Use Spot Instances for Amazon Redshift.
 - [x] Use reduced redundancy storage (RRS) for PDF and .csv data in Amazon S3. Add Spot Instances to Amazon EMR jobs. Use Reserved Instances for Amazon Redshift.
 - [ ] Use reduced redundancy storage (RRS) for all data in Amazon S3. Add Spot Instances to Amazon EMR jobs. Use Reserved Instances for Amazon Redshift.
+
+EMR 是用來做大數據運算的 (Hadoop/Spark)。
+
+現在的考試如果出現類似情境，替代 RRS 的現代化選項通常是：
+
+S3 One Zone-IA (單一區域頻繁存取)
+
+一樣便宜 (比 Standard 便宜 20%)。
+
+一樣適用於「可再生資料 (Reproducible Data)」(因為它只存放在一個機房，機房掛了資料就不見)。
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -809,6 +856,20 @@
 - [ ] password.
 - [ ] default group.
 
+在 AWS 的設計中，使用者名稱 (User Name) 是該使用者唯一識別碼 (ARN) 的一部分 (例如：arn:aws:iam::123456789012:user/Alice)。
+
+因此，在考試的情境中，相比於可以隨意修改的密碼或群組，User Name 被視為「不能（或不該）隨意透過 Console 修改」的屬性
+
+Root Account (根帳號) 的天條，請務必記住：
+
+Don't use Root Account for daily tasks: (日常任務不要用 Root)
+
+題目如果問「如何加強安全性？」，選項有 "Delete Root Access Keys" (刪除根帳號的金鑰) 或 "Enable MFA on Root" (開啟 MFA)，通常都是必選。
+
+IAM is Global: (IAM 是全球通用的)
+
+IAM 不分 Region。你在東京創的使用者，在紐約也看得到。題目如果問「在 us-east-1 創了使用者，要去 us-west-2 做什麼設定才能用？」，答案是 「不用做任何設定」。
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### In Amazon EC2 Container Service, are other container types supported?
@@ -817,6 +878,12 @@
 - [ ] Yes, EC2 Container Service also supports Microsoft container service.
 - [x] No, Docker is the only container platform supported by EC2 Container Service presently.
 - [ ] Yes, EC2 Container Service supports Microsoft container service and Openstack.
+
+現在的技術已經更進步了，ECS 其實支援符合 OCI (Open Container Initiative) 標準的容器映像檔，不一定要「只」用 Docker 軟體打包。
+
+ECS 也支援 Windows Containers (雖然底層還是透過 Docker 引擎運作)。
+
+但在 SAA 題目中，如果問到底層容器技術，"Docker" 依然是關鍵字。
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -827,6 +894,12 @@
 - [ ] AWS CloudFront as both the origin server and for caching.
 - [x] Amazon S3 as the origin server and Amazon CloudFront for caching.
 
+"Spiky usage patterns" (突發流量)
+
+S3 + CloudFront	這兩者都是 Serverless (無伺服器) 的全受管服務。流量暴增時，AWS 會自動擴充，你完全不需要預先買機器或設 Auto Scaling。
+
+Storage Gateway 是給「混合雲 (Hybrid Cloud)」用的，用來讓地端機房連線到 S3，不是拿來做公開網站的 Origin。
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Name the disk storage supported by Amazon Elastic Compute Cloud (EC2)
@@ -835,6 +908,28 @@
 - [ ] Amazon AppStream store.
 - [ ] Amazon SNS store.
 - [x] Amazon Instance Store.
+
+1. Instance Store (執行個體儲存) - 本題答案
+
+別名： Ephemeral Storage (暫時性儲存)。
+
+物理位置： 它就位於 EC2 所在的 實體主機 (Host Computer) 內部，是直接插在主機板上的 SSD/HDD。
+
+特性：
+
+速度極快： 因為是直連硬體 (Direct-attached)，IOPS 很高。
+
+資料會消失： 這是最大缺點。如果你把 EC2 關機 (Stop) 或 終止 (Terminate)，這顆硬碟裡的資料就會永久消失。
+
+用途： 適合放 Cache (快取)、Buffer (緩衝區) 或 Load Balancer 後面的無狀態伺服器 (反正資料不見了也沒差)。
+
+2. Amazon EBS (Elastic Block Store) - 雖然選項沒寫，但它是主流
+
+特性： 它是透過 網路 連接的虛擬硬碟。
+
+持久性： 就算 EC2 關機 (Stop)，EBS 上面的資料還在。
+
+用途： 大部分 EC2 的 C 槽 (Root Volume) 和資料碟都用這個。
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -845,6 +940,18 @@
 - [ ] No. You cannot.
 - [ ] Only if the tag 'VPC Change Group' is true.
 
+屬性,啟動後還能改嗎？,如何解法？
+
+Security Group,✅ Yes (隨時可改),直接在 Console 修改。
+
+Instance Type,✅ Yes (需停機),"把機器 Stop -> Change Type (e.g., t2.micro 改 m5.large) -> Start。"
+
+Subnet (子網),❌ No (絕對不行),必須建立 AMI -> 在新 Subnet 開一台新的 EC2 -> 終止舊的。
+
+VPC,❌ No (絕對不行),同上，必須透過 AMI 搬遷。
+
+Primary Private IP,❌ No,主內網 IP 綁定後就不能改。
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### If I want an instance to have a public IP address, which IP address should I use?
@@ -853,6 +960,7 @@
 - [ ] Class B IP Address.
 - [ ] Class A IP Address.
 - [ ] Dynamic IP Address.
+
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -868,10 +976,12 @@
 ### Which of the following services natively encrypts data at rest within an AWS region? (Choose 2 answers)
 
 - [x] AWS Storage Gateway.
-- [ ] Amazon DynamoDB.
+- [x] Amazon DynamoDB.
 - [ ] Amazon CloudFront.
 - [x] Amazon Glacier.
 - [ ] Amazon Simple Queue Service.
+
+現在： DynamoDB 現在其實也已經變成 預設強制加密 (Encryption at Rest is enabled by default) 了。
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -881,6 +991,14 @@
 - [ ] Amazon S3.
 - [x] Amazon Glacier.
 - [ ] A web server running on Amazon EC2 instances.
+
+考試如果問 CloudFront 可以接在誰後面，請認明這三大類：
+
+S3 Bucket: 最常見的組合 (Static Hosting)。
+
+AWS Resources (EC2 / ELB): 動態網站，前面擋一層 CloudFront 做快取或安全防護。
+
+Custom Origin (自訂源站): 這是指 你自己機房裡的伺服器 (On-Premises)。沒錯！CloudFront 也可以幫你家裡的伺服器做全球加速，只要它是 HTTP Server 即可。
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -7112,3 +7230,4 @@
 - [ ] Use Amazon Managed Service for Apache Flink (previously known as Amazon Kinesis Data Analytics) to capture the clickstream data. Use AWS Lambda to process the data in real time.
 
 **[⬆ Back to Top](#table-of-contents)**
+
