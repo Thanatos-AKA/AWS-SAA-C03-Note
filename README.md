@@ -1063,6 +1063,20 @@ Custom Origin (自訂源站): 這是指 你自己機房裡的伺服器 (On-Premi
 - [x] `$ aws sns publish --topic-arn arn:aws:sns:us-east-1:546419318123:OperationsError -message "Script Failure"`.
 - [ ] `$ aws sqs receive-message --queue-url https://queue.amazonaws.com/546419318123/Test`.
 
+在考試中看到 CLI 指令題，請快速檢查以下兩點，通常就能抓出錯誤：
+
+參數前綴 (Prefix): 檢查是否用了 -- (Double dashes)。
+
+❌ -instance-ids
+
+✅ --instance-ids
+
+指令順序 (Order): 標準格式是 aws <service> <command> <parameters>。
+
+❌ aws start-instances ec2 (順序錯了)
+
+✅ aws ec2 start-instances
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### When running my DB Instance as a Multi-AZ deployment, can I use the standby for read or write operations?
@@ -1080,6 +1094,8 @@ Custom Origin (自訂源站): 這是指 你自己機房裡的伺服器 (On-Premi
 - [ ] Under REVI EW.
 - [x] Under MANAGEMENT OPTIONS.
 - [ ] Under ENGINE SELECTION.
+
+考試策略： 遇到這種問 "Where" (在哪裡) 的介面題，如果選項中有 "Management" 或 "Advanced Settings"，通常選這類跟「管理/進階」有關的選項準沒錯。
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1116,6 +1132,30 @@ Custom Origin (自訂源站): 這是指 你自己機房裡的伺服器 (On-Premi
 - [ ] VPC Security Groups.
 - [x] network ACLs.
 
+特性	Security Group (安全群組)	Network ACL (網路存取控制清單)
+
+作用層級	Instance (EC2 執行個體)	Subnet (子網)
+
+防護對象	保護單一台機器	保護整個子網內的所有機器
+
+狀態 (State)	
+
+✅ Stateful (有狀態)
+
+
+進得來，就自動出得去 (不用設 Outbound)。
+
+❌ Stateless (無狀態)
+
+
+沒記憶力，進來查一次，出去還要再查一次 (出入都要設)。
+
+規則類型	只能設 Allow (允許)	可以設 Allow (允許) 和 Deny (拒絕)
+
+優先順序	沒有順序 (全部規則都會看)	有順序 (依照號碼由小到大執行，先符合先贏)
+
+預設行為	拒絕所有入站 (Deny All Inbound)	允許所有進出 (Allow All)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You have been asked to tighten up the password policies in your organization after a serious security breach, so you need to consider every possible security measure. Which of the following is not an account password policy for IAM Users that can be set?
@@ -1125,14 +1165,7 @@ Custom Origin (自訂源站): 這是指 你自己機房裡的伺服器 (On-Premi
 - [x] Force IAM users to contact an account administrator when the user has entered his password incorrectly.
 - [ ] Prevent IAM users from reusing previous passwords.
 
-**[⬆ Back to Top](#table-of-contents)**
-
-### Multi-AZ deployment [...] supported for Microsoft SQL Server DB Instances.
-
-- [x] is not currently.
-- [ ] is as of 2013.
-- [ ] is planned to be in 2014.
-- [ ] will never be.
+AWS IAM 沒有 提供「輸入錯誤 N 次就鎖定帳號」的設定
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1165,9 +1198,9 @@ Custom Origin (自訂源站): 這是指 你自己機房裡的伺服器 (On-Premi
 
 ### A company is running a batch analysis every hour on their main transactional DB, running on an RDS MySQL instance to populate their central Data Warehouse running on Redshift. During the execution of the batch their transactional applications are very slow. When the batch completes they need to update the top management dashboard with the new data. The dashboard is produced by another system running on-premises that is currently started when a manually-sent email notifies that an update is required. The on-premises system cannot be modified because it is managed by another team. How would you optimize this scenario to solve performance issues and automate the process as much as possible?
 
-- [x] Replace RDS with Redshift for the batch analysis and SNS to notify the on-premises system to update the dashboard.
+- [ ] Replace RDS with Redshift for the batch analysis and SNS to notify the on-premises system to update the dashboard.
 - [ ] Replace RDS with Redshift for the batch analysis and SQS to send a message to the on-premises system to update the dashboard.
-- [ ] Create an RDS Read Replica for the batch analysis and SNS to notify the on-premises system to update the dashboard.
+- [x] Create an RDS Read Replica for the batch analysis and SNS to notify the on-premises system to update the dashboard.
 - [ ] Create an RDS Read Replica for the batch analysis and SQS to send a message to the on-premises system to update the dashboard.
 
 **[⬆ Back to Top](#table-of-contents)**
