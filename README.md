@@ -1185,6 +1185,8 @@ AWS IAM 沒有 提供「輸入錯誤 N 次就鎖定帳號」的設定
 - [ ] SMTP Interface.
 - [ ] AWS Elastic Beanstalk.
 
+AWS CloudFormation: 這是「基礎設施即程式碼 (IaC)」
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A user is observing the EC2 CPU utilization metric on CloudWatch. The user has observed some interesting patterns while filtering over the 1 week period for a particular hour. The user wants to zoom that data point to a more granular period. How can the user do that easily with CloudWatch?
@@ -1193,6 +1195,10 @@ AWS IAM 沒有 提供「輸入錯誤 N 次就鎖定帳號」的設定
 - [ ] The user can zoom a particular period by specifying the aggregation data for that period.
 - [ ] The user can zoom a particular period by double clicking on that period with the mouse.
 - [ ] The user can zoom a particular period by specifying the period in the Time Range.
+
+不能改程式 (Can't be modified) Email, HTTP EndpointSNS SNS 是 Push (推播)。它可以主動把 Email 塞給舊系統，舊系統不用動。
+
+可以改程式 / 需要緩衝Polling, Worker, BufferSQS SQS 是 Pull (拉取)。需要接收端主動去拿資料。
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1240,6 +1246,12 @@ AWS IAM 沒有 提供「輸入錯誤 N 次就鎖定帳號」的設定
 - [ ] Enable IAM Identity Federation.
 - [ ] Use S3 Virtual Hosting.
 
+IAM Identity Federation (身分聯合) 是讓你可以用 外部身分 (例如 Google 帳號、Facebook、或是公司的 Active Directory) 來登入 AWS
+
+Path-Style (舊式/路徑式)： https://s3.amazonaws.com/my-bucket/image.jpg (把 Bucket 名稱放在後面當目錄)。
+
+Virtual-Hosted Style (新式/虛擬主機式)： https://my-bucket.s3.amazonaws.com/image.jpg (把 Bucket 名稱放在最前面當作子網域)。
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are in the process of creating a Route 53 DNS failover to direct traffic to two EC2 zones. Obviously, if one fails, you would like Route 53 to direct traffic to the other region. Each region has an ELB with some instances being distributed. What is the best way for you to configure the Route 53 health check?
@@ -1249,12 +1261,26 @@ AWS IAM 沒有 提供「輸入錯誤 N 次就鎖定帳號」的設定
 - [ ] Route 53 doesn't support ELB with an internal health check. You need to associate your resource record set for the ELB with your own health check.
 - [x] Route 53 natively supports ELB with an internal health check. Turn 'Evaluate target health' on and 'Associate with Health Check' off and R53 will use the ELB's internal health check.
 
+Evaluate Target Health (ETH)。(不支援CNAME，只支援Alias Record)
+
+ETH = ON (開啟)： Route 53 會直接透過 AWS 內部線路問 ELB：「欸，你背後的 EC2 還活著嗎？」如果 ELB 說死了，Route 53 就直接認定故障，進行切換。這是最快、最準確、且免費的方法。
+
+ETH = OFF (關閉)： Route 53 只負責解析 DNS，不管 ELB 是死是活。
+
+看到 Alias Record 指向 AWS 資源 (ELB, CloudFront, S3 Website) 做 Failover：
+
+Alias Record ⮕ 必須用 (不能用 CNAME)。
+
+Evaluate Target Health ⮕ 必須設為 Yes (On)。
+
+Health Check ⮕ 不用自己建 (設為 No/Off，除非是複雜架構)。
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### For each DB Instance class, what is the maximum size of associated storage capacity?
 
 - [ ] 5GB.
-- [x] 1TB.
+- [x] 64 TiB 或 128 TiB
 - [ ] 2TB.
 - [ ] 500GB.
 
@@ -1266,6 +1292,10 @@ AWS IAM 沒有 提供「輸入錯誤 N 次就鎖定帳號」的設定
 - [x] PIOPS.
 - [ ] AMI.
 - [ ] Availability Zones.
+
+PIOPS (Provisioned IOPS EBS):
+
+它的功能： 讓你的硬碟跑得非常快、非常穩（例如保證每秒讀寫 5000 次）。
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1285,14 +1315,17 @@ AWS IAM 沒有 提供「輸入錯誤 N 次就鎖定帳號」的設定
 - [x] You can't terminate, stop, or delete a resource based solely on its tags.
 - [ ] You don't need to specify the resource identifier while stopping a resource.
 
+破壞性指令必須明確 (Destructive Actions require IDs)：
+Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Resource Identifier (資源 ID)，例如 i-1234567890abcdef0。 不能 直接對 AWS 說：「幫我把所有標籤是 Environment: Test 的機器全部關機」。
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are deploying an application to collect votes for a very popular television show. Millions of users will submit votes using mobile devices. The votes must be collected into a durable, scalable, and highly available data store for real-time public tabulation. Which service should you use?
 
-- [x] Amazon DynamoDB.
-- [ ] Amazon Redshift.
-- [ ] Amazon Kinesis.
-- [ ] Amazon Simple Queue Service.
+- [x] Amazon DynamoDB. 直接對 DynamoDB 說：「把 候選人A 的票數 +1」。 Atomic Counters (原子計數器)
+- [ ] Amazon Redshift. 大數據分析 (OLAP)
+- [ ] Amazon Kinesis. 串流 (Streaming) 服務，像水管一樣
+- [ ] Amazon Simple Queue Service. 暫存用的，無法提供「即時查詢統計」功能。
 
 **[⬆ Back to Top](#table-of-contents)**
 
