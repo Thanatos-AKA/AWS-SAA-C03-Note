@@ -1354,6 +1354,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] Nothing, it can be accessed from any IP address using S3.
 - [ ] Both the outbound security group and outbound network ACL need to be modified to allow outbound traffic.
 
+![alt text](image.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You can modify the backup retention period; valid values are 0 (for no backup retention) to a maximum of [...] days.
@@ -1363,6 +1365,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] 15.
 - [ ] 5.
 
+![alt text](image-1.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### To serve Web traffic for a popular product your chief financial officer and IT director have purchased 10 ml large heavy utilization Reserved Instances (RIs) evenly spread across two Availability Zones. Route 53 is used to deliver the traffic to an Elastic Load Balancer (ELB). After several months, the product grows even more popular and you need additional capacity. As a result, your company purchases two C3.2xlarge medium utilization RIs. You register the two c3 2xlarge instances with your ELB and quickly find that the ml large instances are at 100% of capacity and the c3 2xlarge instances have significant capacity that's unused. Which option is the most cost effective and uses EC2 capacity most effectively?
@@ -1371,6 +1375,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] Configure Autoscaling group and Launch Configuration with ELB to add up to 10 more on-demand ml large instances when triggered by Cloudwatch. Shut off c3 2xlarge instances.
 - [ ] Route traffic to EC2 ml large and c3 2xlarge instances directly using Route 53 latency based routing and health checks. Shut off ELB.
 - [ ] Configure ELB with two c3 2xlarge Instances and use on-demand Autoscaling group for up to two additional c3.2xlarge instances. Shut off m1.large instances.
+
+![alt text](image-2.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1383,6 +1389,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] Unmount the EBS volume. Toggle the encryption attribute to True. Re-mount the Amazon EBS volume.
 - [ ] Snapshot the current Amazon EBS volume. Restore the snapshot to a new, encrypted Amazon EBS volume. Mount the Amazon EBS volume.
 
+![alt text](image-3.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A user has launched one EC2 instance in the US West region. The user wants to access the RDS instance launched in the US East region from that EC2 instance. How can the user configure the access for that EC2 instance?
@@ -1392,6 +1400,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] Open the security group of the US West region in the RDS security group's ingress rule.
 - [ ] Create an IAM role which has access to RDS and launch an instance in the US West region with it.
 
+![alt text](image-4.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You have been asked to build AWS infrastructure for disaster recovery for your local applications and within that you should use an AWS Storage Gateway as part of the solution. Which of the following best describes the function of an AWS Storage Gateway?
@@ -1400,6 +1410,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] A web service that speeds up distribution of your static and dynamic web content.
 - [x] Connects an on-premises software appliance with cloud-based storage to provide seamless and secure integration between your on-premises IT environment and AWS's storage infrastructure.
 - [ ] Is a storage service optimized for infrequently used data, or 'cold data'.
+
+![alt text](image-5.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1418,6 +1430,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] Oracle SQL Developer.
 - [x] Oracle Data Pump.
 - [ ] DBMS_FILE_TRANSFER.
+
+![alt text](image-6.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1473,6 +1487,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] Data is unavailable until the instance is restarted.
 - [x] Data is automatically deleted.
 
+![alt text](image-7.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You've created your first load balancer and have registered your EC2 instances with the load balancer. Elastic Load Balancing routinely performs health checks on all the registered EC2 instances and automatically distributes all incoming requests to the DNS name of your load balancer across your registered, healthy EC2 instances. By default, the load balancer uses the [...] protocol for checking the health of your instances.
@@ -1481,6 +1497,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [x] HTTP.
 - [ ] ICMP.
 - [ ] IPv6.
+
+![alt text](image-8.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
