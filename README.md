@@ -1518,6 +1518,10 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] Whitelist the ELB IP addresses and route payment requests from the Application servers through the ELB.
 - [ ] Automatically assign public IP addresses to the application instances in the Auto Scaling group and run a script on boot that adds each instance's public IP address to the payment validation whitelist API.
 
+ELB 是管「進來 (Ingress)」的： ELB 負責把外部流量分給 EC2。
+
+主動連線不經過 ELB： 當 EC2 要「主動」連去外部 Payment Service 時，流量是不會回頭走 ELB 出去的，而是直接走 Gateway。
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are using Amazon SES as an email solution but are unsure of what its limitations are. Which statement below is correct in regards to that?
@@ -1536,6 +1540,12 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] Increase the RDS MySQL Instance size and Implement provisioned IOPS.
 - [x] Add an RDS MySQL read replica in each Availability Zone.
 
+High number of small reads -> Amazon ElastiCache (Memcached/Redis)
+
+Eventual consistency model -> Read Replica
+
+如果題目要求「強一致性 (Strong Consistency)」，你就不能讀 Replica，只能讀 Primary，這題就無解了。但既然接受最終一致，把讀取流量導向 Replica 是最標準的解法
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### What does a 'Domain' refer to in Amazon SWF?
@@ -1544,6 +1554,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] A special type of worker.
 - [x] A collection of related Workflows.
 - [ ] The DNS record for the Amazon SWF service.
+
+![alt text](image-9.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1599,6 +1611,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] Only EC2-optimized EBS volumes.
 - [ ] Only in read mode.
 
+![alt text](image-10.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You need to measure the performance of your EBS volumes as they seem to be under performing. You have come up with a measurement of 1,024 KB I/O but your colleague tells you that EBS volume performance is measured in IOPS. How many IOPS is equal to 1,024 KB I/O?
@@ -1608,6 +1622,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [ ] 8.
 - [x] 4.
 
+![alt text](image-11.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Your company produces customer commissioned one-of-a-kind skiing helmets combining high fashion with custom technical enhancements. Customers can show off their Individuality on the ski slopes and have access to head-up-displays. GPS rear-view cams and any other technical innovation they wish to embed in the helmet. The current manufacturing process is data rich and complex including assessments to ensure that the custom electronics and materials used to assemble the helmets are to the highest standards. Assessments are a mixture of human and automated assessments you need to add a new set of assessment to model the failure modes of the custom electronics using GPUs with CUDA, across a cluster of servers with low latency networking. What architecture would allow you to automate the existing process using a hybrid approach and ensure that the architecture can support the evolution of processes over time?
@@ -1616,6 +1632,8 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [x] Use Amazon Simple Workflow (SWF) to manages assessments, movement of data & meta-data Use an auto-scaling group of G2 instances in a placement group.
 - [ ] Use Amazon Simple Workflow (SWF) to manages assessments movement of data & meta-data Use an auto-scaling group of C3 instances with SR-IOV (Single Root 1/0 Virtualization).
 - [ ] Use AWS data Pipeline to manage movement of data & meta-data and assessments use autoscaling group of C3 with SR-IOV (Single Root 1/0 virtualization).
+
+![alt text](image-12.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1627,6 +1645,10 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [x] Assign EIPs to all web servers. Configure a Route 53 record set with all EIPs. With health checks and DNS failover.
 - [ ] Configure ELB with an EIP Place all your Web servers behind ELB Configure a Route 53 A record that points to the EIP.
 
+![alt text](image-13.png)
+
+![alt text](image-14.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You need to configure an Amazon S3 bucket to serve static assets for your public-facing web application. Which methods ensure that all objects uploaded to the bucket are set to public read? (Choose 2 answers)
@@ -1636,6 +1658,18 @@ Terminate (終止)、Stop (停止) 或 Delete (刪除) 必須 提供明確的 Re
 - [x] Configure the bucket policy to set all objects to public read.
 - [ ] Use AWS Identity and Access Management roles to set the bucket to public read.
 - [ ] Amazon S3 objects default to public read, so no action is needed.
+
+Bucket ACL： 是用來管「誰可以看到這個水桶的清單 (ListBucket)」或「誰可以寫入檔案 (PutObject)」。
+
+Object ACL： 才是管「誰可以讀取這個檔案 (GetObject)」。
+
+如果你把 Bucket ACL 設為 Public Read，網路上的人只能看到「檔案列表」，但點進去檔案連結時，依然會被拒絕存取 (Access Denied)，因為檔案本身的 Object ACL 還是私有的。
+
+IAM Role 是給 「已知的身分」 用的（例如：某個 EC2、某個 Lambda、或公司的某個員工）。
+
+無法授權給「路人」： 你無法建立一個 IAM Role 給「網際網路上的匿名路人 (Anonymous User)」。
+
+Resource-based vs Identity-based： 要讓「非 AWS 用戶（大眾）」讀取資料，必須使用 Resource-based Policy（也就是 Bucket Policy），而不是 Identity-based Policy（IAM Role）。
 
 **[⬆ Back to Top](#table-of-contents)**
 
