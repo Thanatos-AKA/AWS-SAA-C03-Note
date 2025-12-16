@@ -1,5 +1,7 @@
 ## Table of Contents
 
+![alt text](image-17.png)
+
 | No. | Questions |
 | --- | --------- |
 | 1   | [Which set of Amazon S3 features helps to prevent and recover from accidental data loss?](#which-set-of-amazon-s3-features-helps-to-prevent-and-recover-from-accidental-data-loss)
@@ -1689,6 +1691,10 @@ Resource-based vs Identity-based： 要讓「非 AWS 用戶（大眾）」讀取
 - [ ] Setup an RDS MySQL instance with multiple read replicas in 2 Availability Zones to store the user preference data. The mobile application will query the user preferences from the read replicas. Leverage the MySQL user management and access privilege system to manage security and access credentials.
 - [ ] Store the user preference data in S3. Setup a DynamoDB table with an item for each user and an item attribute pointing to the user's S3 object. The mobile application will retrieve the S3 URL from DynamoDB and then access the S3 object directly. Utilize STS, Web identity Federation, and S3 ACLs to authenticate and authorize access.
 
+![alt text](image-15.png)
+
+![alt text](image-16.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### In the Amazon RDS which uses the SQL Server engine, what is the maximum size for a Microsoft SQL Server DB Instance with SQL Server Express edition?
@@ -1707,6 +1713,8 @@ Resource-based vs Identity-based： 要讓「非 AWS 用戶（大眾）」讀取
 - [ ] The value of the weight associated with the latency alias resource record set in the region with the disabled servers is higher than the weight for the other region.
 - [ ] One of the two working web servers in the other region did not pass its HTTP health check.
 - [x] You did not set 'Evaluate Target Health' to 'Yes' on the latency alias resource record set associated with example com in the region where you disabled the servers.
+
+![alt text](image-18.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
