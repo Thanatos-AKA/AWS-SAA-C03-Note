@@ -1725,6 +1725,8 @@ Resource-based vs Identity-based： 要讓「非 AWS 用戶（大眾）」讀取
 - [ ] instance backups.
 - [ ] mirrors.
 
+![alt text](image-19.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You've been hired to enhance the overall security posture for a very large e-commerce site. They have a well architected multi-tier application running in a VPC that uses ELBs in front of both the web and the app tier with static assets served directly from S3. They are using a combination of RDS and DynamoDB for their dynamic data and then archiving nightly into S3 for further processing with EMR. They are concerned because they found questionable log entries and suspect someone is attempting to gain unauthorized access. Which approach provides a cost effective scalable mitigation to this kind of attack?
@@ -1734,14 +1736,22 @@ Resource-based vs Identity-based： 要讓「非 AWS 用戶（大眾）」讀取
 - [x] Add a WAF tier by creating a new ELB and an AutoScaling group of EC2 Instances running a host based WAF. They would redirect Route 53 to resolve to the new WAF tier ELB. The WAF tier would then pass the traffic to the current web tier. The web tier Security Groups would be updated to only allow traffic from the WAF tier Security Group.
 - [ ] Remove all but TLS 1.2 from the web tier ELB and enable Advanced Protocol Filtering. This will enable the ELB itself to perform WAF functionality.
 
+![alt text](image-20.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are designing the network infrastructure for an application server in Amazon VPC. Users will access all the application instances from the Internet as well as from an on-premises network. The on-premises network is connected to your VPC over an AWS Direct Connect link. How would you design routing to meet the above requirements?
 
-- [x] Configure a single routing Table with a default route via the Internet gateway. Propagate a default route via BGP on the AWS Direct Connect customer router. Associate the routing table with all VPC subnets.
-- [ ] Configure a single routing table with a default route via the internet gateway. Propagate specific routes for the on-premises networks via BGP on the AWS Direct Connect customer router. Associate the routing table with all VPC subnets.
+- [ ] Configure a single routing Table with a default route via the Internet gateway. Propagate a default route via BGP on the AWS Direct Connect customer router. Associate the routing table with all VPC subnets.
+- [x] Configure a single routing table with a default route via the internet gateway. Propagate specific routes for the on-premises networks via BGP on the AWS Direct Connect customer router. Associate the routing table with all VPC subnets.
 - [ ] Configure a single routing table with two default routes: one to the internet via an Internet gateway, the other to the on-premises network via the VPN gateway. Use this routing table across all subnets in your VPC.
 - [ ] Configure two routing tables: one that has a default route via the Internet gateway and another that has a default route via the VPN gateway. Associate both routing tables with each VPC subnet.
+
+![alt text](image-21.png)
+
+Border Gateway Protocol (BGP)
+
+![alt text](image-22.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1751,6 +1761,8 @@ Resource-based vs Identity-based： 要讓「非 AWS 用戶（大眾）」讀取
 - [ ] Create a virtual private gateway with multiple customer gateways, each with a unique set of keys.
 - [ ] Create a virtual public gateway with multiple customer gateways, each with a unique Private subnet.
 - [ ] Create a virtual private gateway with multiple customer gateways, each with unique subnet id.
+
+![alt text](image-23.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1769,6 +1781,8 @@ Resource-based vs Identity-based： 要讓「非 AWS 用戶（大眾）」讀取
 - [ ] DCOM.
 - [ ] CORBA.
 - [ ] XML-RPC.
+
+![alt text](image-24.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1789,6 +1803,8 @@ Resource-based vs Identity-based： 要讓「非 AWS 用戶（大眾）」讀取
 - [x] No.
 - [ ] Only in VPC.
 
+![alt text](image-25.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### While creating the snapshots using the API, which Action should I be using?
@@ -1802,10 +1818,12 @@ Resource-based vs Identity-based： 要讓「非 AWS 用戶（大眾）」讀取
 
 ### A customer needs to capture all client connection information from their load balancer every five minutes. The company wants to use this data for analyzing traffic patterns and troubleshooting their applications. Which of the following options meets the customer requirements?
 
-- [x] Enable AWS CloudTrail for the load balancer.
-- [ ] Enable access logs on the load balancer.
+- [ ] Enable AWS CloudTrail for the load balancer.
+- [x] Enable access logs on the load balancer.
 - [ ] Install the Amazon CloudWatch Logs agent on the load balancer.
 - [ ] Enable Amazon CloudWatch metrics on the load balancer.
+
+![alt text](image-26.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1825,6 +1843,8 @@ Resource-based vs Identity-based： 要讓「非 AWS 用戶（大眾）」讀取
 - [ ] One.
 - [ ] Reserved.
 
+![alt text](image-27.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Can the string value of 'Key' be prefixed with :aws:'?
@@ -1833,6 +1853,8 @@ Resource-based vs Identity-based： 要讓「非 AWS 用戶（大眾）」讀取
 - [ ] Only for S3 not EC2.
 - [ ] Yes.
 - [x] No.
+
+![alt text](image-28.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
