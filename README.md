@@ -2304,9 +2304,15 @@ Border Gateway Protocol (BGP)
 
 ### You need a persistent and durable storage to trace call activity of an IVR (Interactive Voice Response) system. Call duration is mostly in the 2-3 minutes timeframe. Each traced call can be either active or terminated. An external application needs to know each minute the list of currently active calls, which are usually a few calls/second. Put once per month there is a periodic peak up to 1000 calls/second for a few hours. The system is open 24/7 and any downtime should be avoided. Historical data is periodically archived to files. Cost saving is a priority for this project. What database implementation would better fit this scenario, keeping costs as low as possible?
 
-- [x] Use RDS Multi-AZ with two tables, one for 'Active calls' and one for 'Terminated calls'. in this way the 'Active calls' table is always small and effective to access.
-- [ ] Use DynamoDB with a 'Calls' table and a Global Secondary Index on a 'lsActive' attribute that is present for active calls only in this way the Global Secondary index is sparse and more effective.
+- [ ] Use RDS Multi-AZ with two tables, one for 'Active calls' and one for 'Terminated calls'. in this way the 'Active calls' table is always small and effective to access.
+- [x] Use DynamoDB with a 'Calls' table and a Global Secondary Index on a 'lsActive' attribute that is present for active calls only in this way the Global Secondary index is sparse and more effective.
+
+![alt text](image-68.png)
+
 - [ ] Use DynamoDB with a 'Calls' table and a Global secondary index on a 'State' attribute that can equal to 'active' or 'terminated' in this way the Global Secondary index can be used for all Items in the table.
+
+![alt text](image-67.png)
+
 - [ ] Use RDS Multi-AZ with a 'CALLS' table and an Indexed 'STATE* field that can be equal to 'ACTIVE' or 'TERMINATED' in this way the SOL query Is optimized by the use of the Index.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -2327,6 +2333,8 @@ Border Gateway Protocol (BGP)
 - [ ] A public IP address and an Elastic IP address.
 - [x] A private IP address and a public IP address.
 
+![alt text](image-69.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You need to pass a custom script to new Amazon Linux instances created in your Auto Scaling group. Which feature allows you to accomplish this?
@@ -2345,6 +2353,8 @@ Border Gateway Protocol (BGP)
 - [ ] Enable the Requester Pays option to track access via AWS Billing.
 - [ ] Enable Amazon S3 event notifications for Put and Post.
 
+![alt text](image-70.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Which DNS name can only be resolved within Amazon EC2?
@@ -2359,9 +2369,20 @@ Border Gateway Protocol (BGP)
 ### An AWS customer is deploying an application that is composed of an AutoScaling group of EC2 Instances. The customers security policy requires that every outbound connection from these instances to any other service within the customers Virtual Private Cloud must be authenticated using a unique x 509 certificate that contains the specific instance-id. In addition an x 509 certificates must be designed by the customer's Key management service in order to be trusted for authentication. Which of the following configurations will support these requirements?
 
 - [ ] Configure an IAM Role that grants access to an Amazon S3 object containing a signed certificate and configure the Auto Scaling group to launch instances with this role Have the instances bootstrap get the certificate from Amazon S3 upon first boot.
+
+![alt text](image-71.png)
+
 - [ ] Embed a certificate into the Amazon Machine Image that is used by the Auto Scaling group Have the launched instances generate a certificate signature request with the instance's assigned instance- id to the Key management service for signature.
+
+![alt text](image-72.png)
+
 - [x] Configure the Auto Scaling group to send an SNS notification of the launch of a new instance to the trusted key management service. Have the Key management service generate a signed certificate and send it directly to the newly launched instance.
+
+![alt text](image-74.png)
+
 - [ ] Configure the launched instances to generate a new certificate upon first boot Have the Key management service poll the AutoScaling group for associated instances and send new instances a certificate signature that contains the specific instance-id.
+
+![alt text](image-73.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
