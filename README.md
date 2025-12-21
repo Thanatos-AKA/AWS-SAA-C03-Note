@@ -2075,6 +2075,8 @@ Border Gateway Protocol (BGP)
 - [x] Different instances running on the same physical machine are isolated from each other via the Xen hypervisor.
 - [ ] Different instances running on the same physical machine are isolated from each other via IAM permissions.
 
+![alt text](image-44.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Can I detach the primary (ethO) network interface when the instance is running or stopped?
@@ -2082,14 +2084,24 @@ Border Gateway Protocol (BGP)
 - [ ] Yes, You can.
 - [x] No. You cannot.
 
+![alt text](image-45.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You have launched an Amazon Elastic Compute Cloud (EC2) instance into a public subnet with a primary private I P address assigned, an internet gateway is attached to the VPC, and the public route table is configured to send all Internet-based traffic to the Internet gateway. The instance security group is set to allow all outbound traffic but cannot access the internet. Why is the Internet unreachable from this instance?
 
 - [x] The instance does not have a public IP address.
 - [ ] The internet gateway security group must allow all outbound traffic.
+
+![alt text](image-47.png)
+
 - [ ] The instance security group must allow all inbound traffic.
+
+![alt text](image-48.png)
+
 - [ ] The instance 'Source/Destination check' property must be enabled.
+
+![alt text](image-46.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2100,6 +2112,8 @@ Border Gateway Protocol (BGP)
 - [ ] Elastic Beanstalk is faster in deploying applications than CloudFormation.
 - [x] CloudFormation is much more powerful than Elastic Beanstalk, because you can actually design and script custom resources.
 
+![alt text](image-49.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### It is advised that you watch the Amazon CloudWatch [...] metric (available via the AWS Management Console or Amazon Cloud Watch APIs) carefully and recreate the Read Replica should it fall behind due to replication errors.
@@ -2108,6 +2122,8 @@ Border Gateway Protocol (BGP)
 - [ ] Read Replica.
 - [x] Replica Lag.
 - [ ] Single Replica.
+
+![alt text](image-50.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2118,14 +2134,18 @@ Border Gateway Protocol (BGP)
 - [x] Use two SQS queues, one for high priority messages, the other for default priority. Transformation instances first poll the high priority queue; if there is no message, they poll the default priority queue.
 - [ ] Use a single SQS queue. Each message contains the priority level. Transformation instances poll high-priority messages first.
 
+![alt text](image-51.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### True or False: When you view the block device mapping for your instance, you can see only the EBS volumes, not the instance store volumes.
 
 - [ ] Depends on the instance type.
-- [ ] False.
+- [x] False.
 - [ ] Depends on whether you use API call.
-- [x] True.
+- [ ] True.
+
+![alt text](image-52.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2143,6 +2163,8 @@ Border Gateway Protocol (BGP)
 - [x] Yes.
 - [ ] No.
 
+![alt text](image-53.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### If you are using Amazon RDS Provisioned IOPS storage with MySQL and Oracle database engines, you can scale the throughput of your database Instance by specifying the IOPS rate from [...].
@@ -2151,6 +2173,8 @@ Border Gateway Protocol (BGP)
 - [ ] 100 to 1,000.
 - [ ] 10,000 to 100,000.
 - [x] 1,000 to 10,000.
+
+![alt text](image-54.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2161,6 +2185,8 @@ Border Gateway Protocol (BGP)
 - [ ] No, you can't because you can't specify a particular Amazon EC2 resource in an IAM policy.
 - [ ] Yes, you can but only for the resources that are not affected by the action.
 
+![alt text](image-55.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### An enterprise wants to use a third-party SaaS application. The SaaS application needs to have access to issue several API commands to discover Amazon EC2 resources running within the enterprise's account The enterprise has internal security policies that require any outside access to their environment must conform to the principles of least privilege and there must be controls in place to ensure that the credentials used by the 5aa5 vendor cannot be used by any other third party. Which of the following would meet all of these conditions?
@@ -2169,6 +2195,8 @@ Border Gateway Protocol (BGP)
 - [ ] Create an IAM user within the enterprise account assign a user policy to the IAM user that allows only the actions required by the SaaS application create a new access and secret key for the user and provide these credentials to the 5aa5 provider.
 - [x] Create an IAM role for cross-account access allows the SaaS provider's account to assume the role and assign it a policy that allows only the actions required by the SaaS application.
 - [ ] Create an IAM role for EC2 instances, assign it a policy that allows only the actions required for the SaaS application to work. Provide the role ARN to the SaaS provider to use when launching their application instances.
+
+![alt text](image-56.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2179,6 +2207,8 @@ Border Gateway Protocol (BGP)
 - [ ] Hibernate.
 - [ ] Pause.
 
+![alt text](image-57.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### In EC2, what happens to the data in an instance store if an instance reboots (either intentionally or unintentionally)?
@@ -2187,6 +2217,8 @@ Border Gateway Protocol (BGP)
 - [x] Data persists in the instance store.
 - [ ] Data is partially present in the instance store.
 - [ ] Data in the instance store will be lost.
+
+![alt text](image-58.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2199,6 +2231,10 @@ Border Gateway Protocol (BGP)
 - [x] Add alert Amazon CloudWatch to look for high Network in and CPU utilization.
 - [ ] Create processes and capabilities to quickly add and remove rules to the instance OS firewall.
 
+![alt text](image-59.png)
+
+![alt text](image-60.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### In Amazon CloudFront, if you use Amazon EC2 instances and other custom origins with CloudFront, it is recommended to [...].
@@ -2207,6 +2243,8 @@ Border Gateway Protocol (BGP)
 - [ ] restrict Internet communication to private instances while allowing outgoing traffic.
 - [ ] enable access key rotation for CloudWatch metrics.
 - [x] specify the URL of the load balancer for the domain name of your origin server.
+
+![alt text](image-61.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2217,21 +2255,25 @@ Border Gateway Protocol (BGP)
 - [x] The number of ENIs you can attach varies by instance type.
 - [ ] You can attach 100 ENIs total regardless of instance type.
 
+![alt text](image-62.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### What is the reason for this?
 
 - [ ] For security reasons.
 - [ ] Hardware restrictions.
-- [x] Public (IPV4) internet addresses are a scarce resource.
+- [x] Public (IPV4) internet addresses are a ㄋ resource.
 - [ ] There are only 5 network interfaces per instance.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Can a 'user' be associated with multiple AWS accounts?
 
-- [x] Yes.
-- [ ] No.
+- [ ] Yes.
+- [x] No.
+
+![alt text](image-63.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2242,6 +2284,8 @@ Border Gateway Protocol (BGP)
 - [ ] Leveraging Amazon CloudFront, use the HTTP POST method to reduce latency.
 - [ ] Use Amazon Elastic Block Store Provisioned IOPs and use an Amazon EBS-optimized instance.
 
+![alt text](image-64.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You have been given a scope to set up an AWS Media Sharing Framework for a new start up photo sharing company similar to flickr. The first thing that comes to mind about this is that it will obviously need a huge amount of persistent data storage for this framework. Which of the following storage options would be appropriate for persistent storage?
@@ -2249,7 +2293,12 @@ Border Gateway Protocol (BGP)
 - [ ] Amazon Glacier or Amazon S3.
 - [ ] Amazon Glacier or AWS Import/Export.
 - [ ] AWS Import/Export or Amazon CloudFront.
+
+![alt text](image-65.png)
+
 - [x] Amazon EBS volumes or Amazon S3.
+
+![alt text](image-66.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
