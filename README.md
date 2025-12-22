@@ -2409,6 +2409,9 @@ Border Gateway Protocol (BGP)
 ### Which of the below mentioned options is a possible solution to avoid any security threat?
 
 - [ ] Use the IAM based single sign between the AWS resources and the organization application.
+
+![alt text](image-75.png)
+
 - [x] Use the IAM role and assign it to the instance.
 - [ ] Since the application is hosted on EC2, it does not need credentials to access S3.
 - [ ] Use the 509 certificates instead of the access and the secret access keys.
@@ -2419,15 +2422,29 @@ Border Gateway Protocol (BGP)
 
 - [x] A cluster.
 - [ ] A container instance.
+
+![alt text](image-76.png)
+
 - [ ] A container.
+
+![alt text](image-77.png)
+
 - [ ] A task definition.
+
+![alt text](image-78.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are looking to migrate your Development (Dev) and Test environments to AWS. You have decided to use separate AWS accounts to host each environment. You plan to link each accounts bill to a Master AWS account using Consolidated Billing. To make sure you Keep within budget you would like to implement a way for administrators in the Master account to have access to stop, delete and/or terminate resources in both the Dev and Test accounts. Identify which option will allow you to achieve this goal.
 
 - [ ] Create IAM users in the Master account with full Admin permissions. Create cross-account roles in the Dev and Test accounts that grant the Master account access to the resources in the account by inheriting permissions from the Master account.
+
+![alt text](image-79.png)
+
 - [ ] Create IAM users and a cross-account role in the Master account that grants full Admin permissions to the Dev and Test accounts.
+
+![alt text](image-80.png)
+
 - [x] Create IAM users in the Master account Create cross-account roles in the Dev and Test accounts that have full Admin permissions and grant the Master.
 - [ ] Link the accounts using Consolidated Billing. This will give IAM users in the Master account access to resources in the Dev and Test accounts.
 
