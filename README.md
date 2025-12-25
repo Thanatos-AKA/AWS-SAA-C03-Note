@@ -2457,14 +2457,19 @@ Border Gateway Protocol (BGP)
 - [ ] Progressing.
 - [x] Pending.
 
+![alt text](image-81.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A customer is running a multi-tier web application farm in a virtual private cloud (VPC) that is not connected to their corporate network. They are connecting to the VPC over the Internet to manage all of their Amazon EC2 instances running in both the public and private subnets. They have only authorized the bastion-security-group with Microsoft Remote Desktop Protocol (RDP) access to the application instance security groups, but the company wants to further limit administrative access to all of the instances in the VPC. Which of the following Bastion deployment scenarios will meet this requirement?
 
 - [ ] Deploy a Windows Bastion host on the corporate network that has RDP access to all instances in the VP.
 - [ ] Deploy a Windows Bastion host with an Elastic IP address in the public subnet and allow SSH access to the bastion from anywhere.
-- [x] Deploy a Windows Bastion host with an Elastic IP address in the private subnet, and restrict RDP access to the bastion from only the corporate public IP addresses.
-- [ ] Deploy a Windows Bastion host with an auto-assigned Public IP address in the public subnet, and allow RDP access to the bastion from only the corporate public IP addresses.
+
+![alt text](image-82.png)
+
+- [ ] Deploy a Windows Bastion host with an Elastic IP address in the private subnet, and restrict RDP access to the bastion from only the corporate public IP addresses.
+- [x] Deploy a Windows Bastion host with an auto-assigned Public IP address in the public subnet, and allow RDP access to the bastion from only the corporate public IP addresses.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2482,6 +2487,8 @@ Border Gateway Protocol (BGP)
 - [ ] Use CloudFront and an Elastic Load Balancer in front of an auto-scaled set of web servers. The web servers will first call the Login with Amazon service to authenticate the user. The web servers will process the user's vote and store the result into a DynamoDB table using IAM Roles for EC2 instances to gain permissions to the DynamoDB table.
 - [x] Use CloudFront and an Elastic Load Balancer in front of an auto-scaled set of web servers. The web servers will first call the Login with Amazon service to authenticate the user. The web servers will process the user's vote and store the result into an SQS queue using IAM Roles for EC2 Instances to gain permissions to the SQS queue. A set of application servers will then retrieve the items from the queue and store the result into a DynamoDB table.
 
+![alt text](image-83.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are designing a photo sharing mobile app. The application will store all pictures in a single Amazon S3 bucket. Users will upload pictures from their mobile device directly to Amazon S3 and will be able to view and download their own pictures directly from Amazon S3. You want to configure security to handle potentially millions of users in the most secure manner possible. What should your server-side application do when a new user registers on the photo sharing mobile application?
@@ -2489,8 +2496,10 @@ Border Gateway Protocol (BGP)
 - [ ] Create an IAM user. Update the bucket policy with appropriate permissions for the IAM user. Generate an access key and secret key for the IAM user, store them in the mobile app and use these credentials to access Amazon S3.
 - [ ] Create an IAM user. Assign appropriate permissions to the IAM user. Generate an access key and secret key for the IAM user, store them in the mobile app and use these credentials to access Amazon S3.
 - [ ] Create a set of long-term credentials using AWS Security Token Service with appropriate permissions. Store these credentials in the mobile app and use them to access Amazon S3.
-- [x] Record the user's information in Amazon RDS and create a role in IAM with appropriate permissions. When the user uses their mobile app, create temporary credentials using the AWS Security Token Service `AssumeRole` function. Store these credentials in the mobile app's memory and use them to access Amazon S3. Generate new credentials the next time the user runs the mobile app.
-- [ ] Record the user's information in Amazon DynamoDB. When the user uses their mobile app, create temporary credentials using AWS Security Token Service with appropriate permissions. Store these credentials in the mobile app's memory and use them to access Amazon S3. Generate new credentials the next time the user runs the mobile app.
+- [ ] Record the user's information in Amazon RDS and create a role in IAM with appropriate permissions. When the user uses their mobile app, create temporary credentials using the AWS Security Token Service `AssumeRole` function. Store these credentials in the mobile app's memory and use them to access Amazon S3. Generate new credentials the next time the user runs the mobile app.
+- [x] Record the user's information in Amazon DynamoDB. When the user uses their mobile app, create temporary credentials using AWS Security Token Service with appropriate permissions. Store these credentials in the mobile app's memory and use them to access Amazon S3. Generate new credentials the next time the user runs the mobile app.
+
+![alt text](image-84.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2500,6 +2509,8 @@ Border Gateway Protocol (BGP)
 - [ ] Yes for all users except root.
 - [ ] No.
 - [ ] Yes unless special permission granted.
+
+![alt text](image-85.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2515,9 +2526,20 @@ Border Gateway Protocol (BGP)
 ### Your company hosts a social media site supporting users in multiple countries. You have been asked to provide a highly available design for the application that leverages multiple regions for the most recently accessed content and latency sensitive portions of the web site. The most latency sensitive component of the application involves reading user preferences to support web site personalization and ad selection. In addition to running your application in multiple regions, which option will support this application's requirements?
 
 - [x] Serve user content from S3. CloudFront and use Route 53 latency-based routing between ELBs in each region. Retrieve user preferences from a local DynamoDB table in each region and leverage SQS to capture changes to user preferences with SQS workers for propagating updates to each table.
+
+![alt text](image-86.png)
+
 - [ ] Use the S3 Copy API to copy recently accessed content to multiple regions and serve user content from S3. CloudFront with dynamic content and an ELB in each region. Retrieve user preferences from an ElastiCache cluster in each region and leverage SNS notifications to propagate user preference changes to a worker node in each region.
+
+![alt text](image-87.png)
+
 - [ ] Use the S3 Copy API to copy recently accessed content to multiple regions and serve user content from S3 CloudFront and Route 53 latency-based routing Between ELBs in each region. Retrieve user preferences from a DynamoDB table and leverage SQS to capture changes to user preferences with SQS workers for propagating DynamoDB updates.
+
+![alt text](image-88.png)
+
 - [ ] Serve user content from S3. CloudFront with dynamic content, and an ELB in each region. Retrieve user preferences from an ElastiCache cluster in each region and leverage Simple Workflow (SWF) to manage the propagation of user preferences from a centralized DB to each ElastiCache cluster.
+
+![alt text](image-89.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2537,6 +2559,8 @@ Border Gateway Protocol (BGP)
 - [ ] 3.
 - [x] 4.
 
+![alt text](image-91.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Is there a limit to the number of groups you can have?
@@ -2555,15 +2579,6 @@ Border Gateway Protocol (BGP)
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### What is one key difference between an Amazon EBS-backed and an instance-store backed instance?
-
-- [x] Amazon EBS-backed instances can be stopped and restarted.
-- [ ] Instance-store backed instances can be stopped and restarted.
-- [ ] Auto scaling requires using Amazon EBS-backed instances.
-- [ ] Virtual Private Cloud requires EBS backed instances.
-
-**[⬆ Back to Top](#table-of-contents)**
-
 ### A major customer has asked you to set up his AWS infrastructure so that it will be easy to recover in the case of a disaster of some sort. Which of the following statements is true of Amazon EC2 security groups?
 
 - [ ] Create and maintain AMIs of key servers where fast recovery is required.
@@ -2573,14 +2588,6 @@ Border Gateway Protocol (BGP)
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Select a true statement about Amazon EC2 Security Groups (EC2-Classic).
-
-- [x] After you launch an instance in EC2-Classic, you can't change its security groups.
-- [ ] After you launch an instance in EC2-Classic, you can change its security groups only once.
-- [ ] After you launch an instance in EC2-Classic, you can only add rules to a security group.
-- [ ] After you launch an instance in EC2-Classic, you cannot add or remove rules from a security group.
-
-**[⬆ Back to Top](#table-of-contents)**
 
 ### To view information about an Amazon EBS volume, open the Amazon EC2 console at <https://console.aws.amazon.com/ec2/>, click in the Navigation panel.
 
@@ -2588,6 +2595,8 @@ Border Gateway Protocol (BGP)
 - [ ] Describe.
 - [ ] Details.
 - [x] Volumes.
+
+![alt text](image-92.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2604,6 +2613,8 @@ Border Gateway Protocol (BGP)
 - [ ] Immediately to the new instances only.
 - [ ] Immediately to the new instances, but old instances must be stopped and restarted before the new rules apply.
 - [ ] To all instances, but it may take several minutes for old instances to see the changes.
+
+![alt text](image-93.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2622,6 +2633,8 @@ Border Gateway Protocol (BGP)
 - [x] Amazon EBS.
 - [ ] You can't run a database inside an Amazon instance.
 - [ ] Amazon S3.
+
+![alt text](image-94.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
