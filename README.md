@@ -2662,7 +2662,12 @@ Border Gateway Protocol (BGP)
 - [ ] Verify that your IAM user policy has permission to launch Amazon EC2 instances.
 - [x] Verify that you are connecting with the appropriate user name for your AMI.
 - [ ] Verify that the Amazon EC2 Instance was launched with the proper IAM role.
+
+![alt text](image-95.png)
+
 - [ ] Verify that your federation trust to AWS has been established.
+
+![alt text](image-96.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2674,6 +2679,8 @@ Border Gateway Protocol (BGP)
 - [x] Terminate an instance in the AZ which currently has 2 running EC2 instances.
 - [ ] Randomly select one of the 3 AZs, and then terminate an instance in that A.
 
+![alt text](image-97.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A photo-sharing service stores pictures in Amazon Simple Storage Service (S3) and allows application sign-in using an OpenID Connect-compatible identity provider. Which AWS Security Token Service approach to temporary access should you use for the Amazon S3 operations?
@@ -2683,6 +2690,10 @@ Border Gateway Protocol (BGP)
 - [ ] AWS Identity and Access Management roles.
 - [x] Web Identity Federation.
 
+![alt text](image-98.png)
+
+![alt text](image-99.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### What is the maximum key length of a tag?
@@ -2691,6 +2702,8 @@ Border Gateway Protocol (BGP)
 - [ ] 64 Unicode characters.
 - [ ] 256 Unicode characters.
 - [x] 128 Unicode characters.
+
+![alt text](image-100.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2714,17 +2727,22 @@ Border Gateway Protocol (BGP)
 
 - [ ] Yes, they are allowed but only for selected regions.
 - [ ] No, they are never allowed.
-- [ ] Yes, they are allowed without any permission.
-- [x] Yes, they are allowed but only with approval.
+- [x] Yes, they are allowed without any permission.
+- [ ] Yes, they are allowed but only with approval.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are building a system to distribute confidential documents to employees. Using CloudFront, what method could be used to serve content that is stored in S3, but not publically accessible from S3 directly?
 
 - [ ] Add the CloudFront account security group 'amazon-cf/amazon-cf-sg' to the appropriate S3 bucket policy.
+
+![alt text](image-102.png)
+
 - [ ] Create a S3 bucket policy that lists the CloudFront distribution ID as the Principal and the target bucket as the Amazon Resource Name (ARN).
 - [ ] Create an Identity and Access Management (IAM) User for CloudFront and grant access to the objects in your S3 bucket to that IAM User.
 - [x] Create an Origin Access Identity (OAI) for CloudFront and grant access to the objects in your S3 bucket to that OA.
+
+![alt text](image-101.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2734,6 +2752,8 @@ Border Gateway Protocol (BGP)
 - [ ] Add additional cc2 8x large instances by introducing a task group.
 - [x] Use smaller instances that have higher aggregate 1/0 performance.
 - [ ] Create fewer, larger fi les on Amazon S3.
+
+![alt text](image-103.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2750,9 +2770,14 @@ Border Gateway Protocol (BGP)
 
 - [x] An Alias record can map one DNS name to another Amazon Route 53 DNS name.
 - [ ] A CNAME record can be created for your zone apex.
+
+![alt text](image-104.png)
+
 - [x] An Amazon Route 53 CNAME record can point to any DNS record hosted anywhere.
 - [ ] TTL can be set for an Alias record in Amazon Route 53.
 - [ ] An Amazon Route 53 Alias record can point to any DNS record hosted anywhere.
+
+![alt text](image-105.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2762,6 +2787,8 @@ Border Gateway Protocol (BGP)
 - [x] Yes.
 - [ ] No, the snapshot would turn off your instance automatically.
 - [ ] No.
+
+![alt text](image-106.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2785,8 +2812,8 @@ Border Gateway Protocol (BGP)
 
 ### True or False: Amazon EC2 has no Amazon Resource Names (ARNs) because you can't specify a particular Amazon EC2 resource in an IAM policy.
 
-- [x] True.
-- [ ] False.
+- [ ] True.
+- [x] False.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2814,6 +2841,8 @@ Border Gateway Protocol (BGP)
 - [ ] Web servers: store read-only data in an EC2 NFS server, mount to each web server at boot time. App servers: share state using a combination of DynamoDB and IP multicast. Database: use RDS with multi-AZ deployment and one or more Read Replicas. Backup: web and app servers backed up weekly via AMIs, database backed up via DB snapshots.
 - [x] Web servers: store read-only data in S3, and copy from S3 to root volume at boot time. App servers: share state using a combination of DynamoDB and IP unicast. Database: use RDS with multi-AZ deployment and one or more Read Replicas. Backup: web and app servers backed up weekly via AMIs, database backed up via DB snapshots.
 - [ ] Web servers: store read-only data in S3, and copy from S3 to root volume at boot time. App servers: share state using a combination of DynamoDB and IP unicast. Database: use RDS with multi-AZdeployment. Backup: web and app servers backed up weekly via AMIs, database backed up via DB snapshots.
+
+![alt text](image-107.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2856,6 +2885,9 @@ Border Gateway Protocol (BGP)
 ### A company needs to monitor the read and write IOPs metrics for their AWS MySQL RDS instance and send real-time alerts to their operations team. Which AWS services can accomplish this? (Choose 2 answers)
 
 - [ ] Amazon Simple Email Service.
+
+![alt text](image-108.png)
+
 - [x] Amazon CloudWatch.
 - [ ] Amazon Simple Queue Service.
 - [ ] Amazon Route 53.
@@ -2870,6 +2902,8 @@ Border Gateway Protocol (BGP)
 - [ ] ELB DNS supports both IPV4 and IPV6.
 - [x] The ELB supports either IPV4 or IPV6 but not both.
 
+![alt text](image-109.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### What is Oracle SQL Developer?
@@ -2878,6 +2912,8 @@ Border Gateway Protocol (BGP)
 - [x] A graphical Java tool distributed without cost by Oracle.
 - [ ] It is a variant of the SQL Server Management Studio designed by Microsoft to support Oracle DBMS functionalities.
 - [ ] A different DBMS released by Microsoft free of cost.
+
+![alt text](image-110.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2906,6 +2942,8 @@ Border Gateway Protocol (BGP)
 - [ ] No because you need to be Sysadmin to access CloudWatch data.
 - [ ] Yes. Any user can see all CloudWatch data and needs no access rights.
 
+![alt text](image-111.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Which Amazon Elastic Compute Cloud feature can you query from within the instance to access instance properties?
@@ -2915,12 +2953,14 @@ Border Gateway Protocol (BGP)
 - [x] Instance metadata.
 - [ ] Amazon Machine Image.
 
+![alt text](image-112.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Making your snapshot public shares all snapshot data with everyone. Can the snapshots with AWS Market place product codes be made public?
 
-- [x] Yes.
-- [ ] No.
+- [ ] Yes.
+- [x] No.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2948,6 +2988,8 @@ Border Gateway Protocol (BGP)
 - [ ] Open the port for an ELB static IP in the EC2 security group.
 - [ ] Configure the security group of EC2, which allows access only to the ELB listener.
 
+![alt text](image-113.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You're trying to delete an SSL certificate from the IAM certificate store, and you're getting the message 'Certificate: <certificate< span=''>-id> is being used by CloudFront.' Which of the following statements is probably the reason why you are getting this error?
@@ -2966,14 +3008,18 @@ Border Gateway Protocol (BGP)
 - [ ] A security group that has only port 3389 (for RDP) open to your network.
 - [ ] A security group that has only port 22 (for SSH) open to your network.
 
+![alt text](image-114.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A web company is looking to implement an intrusion detection and prevention system into their deployed VPC. This platform should have the ability to scale to thousands of instances running inside of the VPC. How should they architect their solution to achieve these goals?
 
 - [ ] Configure an instance with monitoring software and the elastic network interface (ENI) set to promiscuous mode packet sniffing to see an traffic across the VPC. Configure servers running in the VPC using the host-based 'route' commands to send all traffic through the platform to a scalable virtualized IDS/IP.
 - [ ] Create a second VPC and route all traffic from the primary application VPC through the second VPC where the scalable virtualized IDS/IPS platform resides.
-- [x] Configure servers running in the VPC using the host-based 'route' commands to send all traffic through the platform to a scalable virtualized IDS/IP.
-- [ ] Configure each host with an agent that collects all network traffic and sends that traffic to the IDS/IPS platform for inspection.
+- [ ] Configure servers running in the VPC using the host-based 'route' commands to send all traffic through the platform to a scalable virtualized IDS/IP.
+- [x] Configure each host with an agent that collects all network traffic and sends that traffic to the IDS/IPS platform for inspection.
+
+![alt text](image-115.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2984,6 +3030,8 @@ Border Gateway Protocol (BGP)
 - [ ] Block the IPs of the offending websites in Security Groups.
 - [ ] Store photos on an EBS volume of the web server.
 
+![alt text](image-116.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Which of the following is not a true statement relating to the performance of your EBS volumes?
@@ -2992,6 +3040,8 @@ Border Gateway Protocol (BGP)
 - [ ] General Purpose (SSD) and Provisioned IOPS (SSD) volumes have a throughput limit of 128 MB/s per volume.
 - [ ] There is a relationship between the maximum performance of your EBS volumes, the amount of I/O you are driving to them, and the amount of time it takes for each transaction to complete.
 - [ ] There is a 5 to 50 percent reduction in IOPS when you first access each block of data on a newly created or restored EBS volume.
+
+![alt text](image-117.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3009,6 +3059,8 @@ Border Gateway Protocol (BGP)
 - [ ] regional.
 - [x] based on Availability Zone.
 - [ ] global.
+
+![alt text](image-118.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3028,6 +3080,8 @@ Border Gateway Protocol (BGP)
 - [ ] USD 0.02 per GB
 - [ ] USD 0.01 per GB.
 
+![alt text](image-119.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### In DynamoDB, could you use IAM to grant access to Amazon DynamoDB resources and API actions?
@@ -3036,6 +3090,8 @@ Border Gateway Protocol (BGP)
 - [ ] Depended to the type of access.
 - [x] Yes.
 - [ ] No.
+
+![alt text](image-120.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3046,6 +3102,8 @@ Border Gateway Protocol (BGP)
 - [ ] to read or modify any code commit key of the table directly, without a middle-tier service.
 - [x] to read or modify the table directly, without a middle-tier service.
 
+![alt text](image-121.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### What are the initial settings of an user created security group?
@@ -3054,6 +3112,8 @@ Border Gateway Protocol (BGP)
 - [ ] Al low no inbound traffic and Al low no outbound traffic.
 - [x] Al low no inbound traffic and Al low all outbound traffic.
 - [ ] Allow all inbound traffic and Allow all outbound traffic.
+
+![alt text](image-122.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3091,6 +3151,8 @@ Border Gateway Protocol (BGP)
 - [ ] You are billed for the virtual tape data you store in Amazon S3 and billed for the portion of virtual tape capacity that you use, not for the size of the virtual tape.
 - [ ] You are billed for the virtual tape data you store in Amazon S3 and are billed for the size of the virtual tape.
 
+![alt text](image-123.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### True or False: The new DB Instance that is created when you promote a Read Replica retains the backup window period.
@@ -3107,6 +3169,8 @@ Border Gateway Protocol (BGP)
 - [ ] Amazon SQS.
 - [ ] Amazon FPS.
 
+![alt text](image-124.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are tasked with setting up a Linux bastion host for access to Amazon EC2 instances running in your VPC. Only clients connecting from the corporate external public IP address 72.34.51.100 should have SSH access to the host. Which option will meet the customer requirement?
@@ -3116,6 +3180,8 @@ Border Gateway Protocol (BGP)
 - [ ] Security Group Inbound Rule: Protocol – UDP, Port Range- 22, Source 72.34.51.100/32.
 - [ ] Network ACL Inbound Rule: Protocol – UDP, Port Range- 22, Source 72.34.51.100/32.
 - [ ] Network ACL Inbound Rule: Protocol – TCP, Port Range-22, Source 72.34.51.100/0.
+
+![alt text](image-125.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3153,6 +3219,8 @@ Border Gateway Protocol (BGP)
 - [ ] Amazon DynamoDB.
 - [x] AWS Elastic Beanstalk.
 
+![alt text](image-126.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### While launching an RDS DB instance, on which page I can select the Availability Zone?
@@ -3170,6 +3238,8 @@ Border Gateway Protocol (BGP)
 - [ ] Use Import/Export to import the VM as an EBS snapshot and attach to EC2.
 - [ ] Use S3 to create a backup of the VM and restore the data into EC2.
 - [ ] Use the ec2-bundle-instance API to Import an Image of the VM into EC2.
+
+![alt text](image-127.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3207,6 +3277,8 @@ Border Gateway Protocol (BGP)
 - [ ] secondary public IP.
 - [ ] add on secondary IP.
 
+![alt text](image-128.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### By default, EBS volumes that are created and attached to an instance at launch are deleted when that instance is terminated. You can modify this behavior by changing the value of the flag [...] to false when you launch the instance.
@@ -3215,15 +3287,6 @@ Border Gateway Protocol (BGP)
 - [ ] Remove On Deletion.
 - [ ] Remove On Termination.
 - [ ] Terminate On Deletion.
-
-**[⬆ Back to Top](#table-of-contents)**
-
-### Which AWS service helps this functionality?
-
-- [x] AWS Simple Queue Service.
-- [ ] AWS Simple Notification Service.
-- [ ] AWS Simple Workflow Service.
-- [ ] AWS Simple Email Service.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3260,6 +3323,8 @@ Border Gateway Protocol (BGP)
 - [x] Performance, cost optimization, security, and fault tolerance.
 - [ ] Performance, cost optimization, access control, and connectivity.
 
+![alt text](image-129.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### An AWS customer runs a public blogging website. The site users upload two million blog entries a month. The average blog entry size is 200 KB. The access rate to blog entries drops to negligible 6 months after publication and users rarely access a blog entry 1 year after publication. Additionally, blog entries have a high update rate during the first 3 months following publication, this drops to no updates after 6 months. The customer wants to use CloudFront to improve his user's load times. Which of the following recommendations would you make to the customer?
@@ -3268,6 +3333,12 @@ Border Gateway Protocol (BGP)
 - [ ] Create a CloudFront distribution with 'US' Europe price class for US/ Europe users and a different CloudFront distribution with Al l Edge Locations' for the remaining users.
 - [x] Create a CloudFront distribution with S3 access restricted only to the CloudFront identity and partition the blog entry's location in S3 according to the month it was uploaded to be used withCloudFront behaviors.
 - [ ] Create a CloudFronl distribution with Restrict Viewer Access Forward Query string set to true and minimum TTL of 0.
+
+![alt text](image-130.png)
+
+![alt text](image-132.png)
+
+![alt text](image-131.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3309,8 +3380,10 @@ Border Gateway Protocol (BGP)
 
 ### Is the SQL Server Audit feature supported in the Amazon RDS SQL Server engine?
 
-- [ ] Yes.
-- [x] No.
+- [x] Yes.
+- [ ] No.
+
+![alt text](image-133.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3345,7 +3418,14 @@ Border Gateway Protocol (BGP)
 - [ ] The Amazon EC2 instances do not have a dynamically allocated private IP address.
 - [x] The security groups or network ACLs are not properly configured for web traffic.
 - [ ] The load balancer is not configured in a private subnet with a NAT instance.
+
+![alt text](image-134.png)
+
 - [ ] The VPC does not have a VGW configured.
+
+![alt text](image-135.png)
+
+![alt text](image-136.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
