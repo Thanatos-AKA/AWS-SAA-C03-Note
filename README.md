@@ -3442,6 +3442,11 @@ Border Gateway Protocol (BGP)
 
 - [ ] BYOL and Enterprise License.
 - [x] BYOL and License Included.
+
+![alt text](image-137.png)
+
+![alt text](image-138.png)
+
 - [ ] Enterprise License and License Included.
 - [ ] Role based License and License Included.
 
@@ -3465,12 +3470,21 @@ Border Gateway Protocol (BGP)
 - [x] Deploy 3 EC2 instances in one Availability Zone and 3 in another Availability Zone and use Amazon Elastic Load Balancer.
 - [ ] Deploy 2 EC2 instances in three regions and use Amazon Elastic Load Balancer.
 
+![alt text](image-139.png)
+
+![alt text](image-141.png)
+
+![alt text](image-140.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### An ERP application is deployed across multiple AZs in a single region. In the event of failure, the Recovery Time Objective (RTO) must be less than 3 hours, and the Recovery Point Objective (RPO) must be 15 minutes. The customer realizes that data corruption occurred roughly 1.5 hours ago. What DR strategy could be used to achieve this RTO and RPO in the event of this kind of failure?
 
 - [x] Take hourly DB backups to S3, with transaction logs stored in S3 every 5 minutes.
 - [ ] Use synchronous database master-slave replication between two Availability Zones.
+
+![alt text](image-142.png)
+
 - [ ] Take hourly DB backups to EC2 Instance store volumes with transaction logs stored in S3 every 5 minutes.
 - [ ] Take 15 minute DB backups stored in Glacier with transaction logs stored in S3 every 5 minutes.
 
@@ -3496,7 +3510,7 @@ Border Gateway Protocol (BGP)
 
 ### [...] embodies the 'share-nothing' architecture and essentially involves breaking a large database into several smaller databases. Common ways to split a database include: 1. Splitting tables that are not joined in the same query onto different hosts or 2. Duplicating a table across multiple hosts and then using a hashing algorithm to determine which host receives a given update.
 
-- [x] $harding.
+- [x] Sharding.
 - [ ] Fai lure recovery.
 - [ ] Federation.
 - [ ] DOL operations.
@@ -3510,14 +3524,18 @@ Border Gateway Protocol (BGP)
 - [ ] Amazon Route 53 can help detect an outage of your website but can't redirect your end users to alternate locations.
 - [ ] Amazon Route 53 can't help detect an outage of your website, but can redirect your end users to alternate locations.
 
+![alt text](image-143.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Your company plans to host a large donation website on Amazon Web Services (AWS). You anticipate a large and undetermined amount of traffic that will create many database writes. To be certain that you do not drop any writes to a database hosted on AWS. Which service should you use?
 
 - [ ] Amazon RDS with provisioned IOPS up to the anticipated peak write throughput.
-- [x] Amazon Simple Queue Service (SOS) for capturing the writes and draining the queue to write to the database.
+- [x] Amazon Simple Queue Service (SQS) for capturing the writes and draining the queue to write to the database.
 - [ ] Amazon ElastiCache to store the writes until the writes are committed to the database.
 - [ ] Amazon DynamoDB with provisioned write throughput up to the anticipated peak write throughput.
+
+![alt text](image-144.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3533,9 +3551,14 @@ Border Gateway Protocol (BGP)
 ### You are migrating a legacy client-server application to AWS. The application responds to a specific DNS domain (e.g. <www.example.com>) and has a 2-tier architecture, with multiple application servers and a database server. Remote clients use TCP to connect to the application servers. The application servers need to know the IP address of the clients in order to function properly and are currently taking that information from the TCP socket. A Multi-AZ RDS MySQL instance will be used for the database. During the migration you can change the application code, but you have to file a change request. How would you implement the architecture on AWS in order to maximize scalability and high availability?
 
 - [ ] File a change request to implement Alias Resource support in the application. Use Route 53 Alias Resource Record to distribute load on two application servers in different AZs.
+
+![alt text](image-146.png)
+
 - [ ] File a change request to implement Latency Based Routing support in the application. Use Route 53 with Latency Based Routing enabled to distribute load on two application servers in different AZs.
 - [ ] File a change request to implement Cross-Zone support in the application. Use an ELB with a TCP Listener and Cross-Zone Load Balancing enabled, two application servers in different AZs.
 - [x] File a change request to implement Proxy Protocol support in the application. Use an ELB with a TCP Listener and Proxy Protocol enabled to distribute load on two application servers in different AZs.
+
+![alt text](image-145.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3544,6 +3567,8 @@ Border Gateway Protocol (BGP)
 - [x] Yes.
 - [ ] No.
 - [ ] Only in VPC.
+
+![alt text](image-148.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3554,6 +3579,8 @@ Border Gateway Protocol (BGP)
 - [ ] Leverage EC2 termination protection and multi-factor authentication, which together require users to authenticate before terminating EC2 instances.
 - [ ] Create an IAM user and apply an IAM role which prevents users from terminating production EC2 instances.
 
+![alt text](image-147.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You have just set up a large site for a client which involved a huge database which you set up with Amazon RDS to run as a Multi-AZ deployment. You now start to worry about what will happen if the database instance fails. Which statement best describes how this database will function if there is a database failure?
@@ -3562,6 +3589,10 @@ Border Gateway Protocol (BGP)
 - [ ] Your database will not resume operation without manual administrative intervention.
 - [ ] Updates to your DB Instance are asynchronously replicated across Availability Zones to the standby in order to keep both in sync and protect your latest database updates against DB Instance failure.
 - [ ] Updates to your DB Instance are synchronously replicated across S3 to the standby in order to keep both in sync and protect your latest database updates against DB Instance failure.
+
+![alt text](image-149.png)
+
+![alt text](image-150.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3572,6 +3603,8 @@ Border Gateway Protocol (BGP)
 - [x] Offload traffic from on-premises environment: Setup a CloudFront distribution, and configure CloudFront to cache objects from a custom origin. Choose to customize your object cache behavior, and select a TTL that objects should exist in cache.
 - [ ] Migrate to AWS: Use VM Import/Export to quickly convert an on-premises web server to an AMI.
 - [ ] Create an Auto Scaling group, which uses the imported AMI to scale the web tier based on incoming traffic. Create an RDS read replica and setup replication between the RDS instance and on-premises MySQL server to migrate the database.
+
+![alt text](image-151.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3586,10 +3619,12 @@ Border Gateway Protocol (BGP)
 
 ### You have a periodic Image analysis application that gets some files in input, analyzes them and for each file writes some data in output to a text file. The number of files in input per day is high and concentrated in a few hours of the day. Currently you have a server on EC2 with a large EBS volume that hosts the input data and the results. It takes almost 20 hours per day to complete the process. What services could be used to reduce the elaboration time and improve the availability of the solution?
 
-- [ ] Amazon S3 to store I/O files. SQS to distribute elaboration commands to a group of hosts working in parallel. Auto scaling to dynamically size the group of hosts depending on the length of the SQS queue.
+- [x] Amazon S3 to store I/O files. SQS to distribute elaboration commands to a group of hosts working in parallel. Auto scaling to dynamically size the group of hosts depending on the length of the SQS queue.
 - [ ] EBS with Provisioned IOPS (PIOPS) to store I/O files. SNS to distribute elaboration commands to a group of hosts working in parallel. Auto Scaling to dynamically size the group of hosts depending on the number of SNS notifications.
 - [ ] Amazon S3 to store I/O files. SNS to distribute elaboration commands to a group of hosts working in parallel. Auto scaling to dynamically size the group of hosts depending on the number of SNS notifications.
-- [x] EBS with Provisioned IOPS (PIOPS) to store I/O files. SQS to distribute elaboration commands to a group of hosts working in parallel. Auto Scaling to dynamically size the group of hosts depending on the length of the SQS queue.
+- [ ] EBS with Provisioned IOPS (PIOPS) to store I/O files. SQS to distribute elaboration commands to a group of hosts working in parallel. Auto Scaling to dynamically size the group of hosts depending on the length of the SQS queue.
+
+![alt text](image-152.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3608,6 +3643,8 @@ Border Gateway Protocol (BGP)
 - [ ] <http://169.169.254.254/latest/>.
 - [ ] <http://127.0.0.1/latest/>.
 - [x] <http://169.254.169.254/latest/>.
+
+![alt text](image-153.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3633,8 +3670,10 @@ Border Gateway Protocol (BGP)
 
 - [ ] Use SQS for passing job messages. Use Cloud Watch alarms to terminate EC2 worker instances when they become idle. Once data is processed, change the storage class of the S3 objects to Reduced Redundancy Storage.
 - [ ] Setup Auto-Scaled workers triggered by queue depth that use spot instances to process messages in SQS. Once data is processed, change the storage class of the S3 objects to Reduced Redundancy Storage.
-- [ ] Setup Auto-Scaled workers triggered by queue depth that use spot instances to process messages in SQS. Once data is processed, change the storage class of the S3 objects to Glacier.
-- [x] Use SNS to pass job messages. Use Cloud Watch alarms to terminate spot worker instances when they become idle. Once data is processed, change the storage class of the S3 object to Glacier.
+- [x] Setup Auto-Scaled workers triggered by queue depth that use spot instances to process messages in SQS. Once data is processed, change the storage class of the S3 objects to Glacier.
+- [ ] Use SNS to pass job messages. Use Cloud Watch alarms to terminate spot worker instances when they become idle. Once data is processed, change the storage class of the S3 object to Glacier.
+
+![alt text](image-154.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3644,6 +3683,8 @@ Border Gateway Protocol (BGP)
 - [ ] All instances can be across multiple regions.
 - [ ] The placement group cannot have more than 5 instances.
 - [ ] All instances must be in the same region.
+
+![alt text](image-155.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
