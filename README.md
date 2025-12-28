@@ -3705,15 +3705,25 @@ Border Gateway Protocol (BGP)
 - [ ] Instantiate a c3.8xlarge instance in us-east-1. Provision an AWS Storage Gateway and configure it for 3 TB of storage and 100,000 IOPS. Attach the volume to the instance.
 - [x] Instantiate an i2.8xlarge instance in us-east-1a. Create a RAID 0 volume using the four 800GB SSD ephemeral disks provided with the instance. Configure synchronous, block-level replication to an identically configured instance in us-east-1b.
 
+![alt text](image-156.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A company is preparing to give AWS Management Console access to developers. Company policy mandates identity federation and role-based access control. Roles are currently assigned using groups in the corporate Active Directory. What combination of the following will give developers access to the AWS console? (Choose 2 answers)
 
 - [x] AWS Directory Service AD Connector.
 - [ ] AWS Directory Service Simple AD.
+
+![alt text](image-157.png)
+
 - [ ] AWS Identity and Access Management groups.
+
+![alt text](image-158.png)
+
 - [x] AWS identity and Access Management roles.
 - [ ] AWS identity and Access Management users.
+
+![alt text](image-159.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3724,6 +3734,10 @@ Border Gateway Protocol (BGP)
 - [x] Use SWF with an Auto Scaling group of activity workers and a decider instance in another Auto Scaling group with min/max=1. Use SES to send emails to customers.
 - [ ] Use an SQS queue to manage all process tasks. Use an Auto Scaling group of EC2 Instances that poll the tasks and execute them. Use SES to send emails to customers.
 
+![alt text](image-160.png)
+
+![alt text](image-161.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A, [...] is an individual, system, or application that interacts with AWS programmatically.
@@ -3733,6 +3747,8 @@ Border Gateway Protocol (BGP)
 - [ ] group.
 - [ ] role.
 
+![alt text](image-162.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A user is accessing an EC2 instance on the SSH port for IP 10.20.30.40. Which one is a secure way to configure that the instance can be accessed only from this IP?
@@ -3741,6 +3757,8 @@ Border Gateway Protocol (BGP)
 - [x] In the security group, open port 22 for IP 10.20.30.40/32.
 - [ ] In the security group, open port 22 for IP 10.20.30.40/24.
 - [ ] In the security group, open port 22 for IP 10.20.30.40/0.
+
+![alt text](image-163.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3767,7 +3785,12 @@ Border Gateway Protocol (BGP)
 - [ ] Create a load balancer, and register the Amazon EC2 instance with it.
 - [x] Create a CloudFront distribution, and configure the Amazon EC2 instance as the origin.
 - [ ] Create an Auto Scaling group from the instance using the Create AutoScaling Group action.
+
+![alt text](image-165.png)
+
 - [ ] Create a launch configuration from the instance using the Create launch Configuration action.
+
+![alt text](image-164.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3787,6 +3810,8 @@ Border Gateway Protocol (BGP)
 - [ ] SharePermission.
 - [ ] RequestPermission.
 
+![alt text](image-166.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You have decided to change the instance type for instances running in your application tier that is using Auto Scaling. In which area below would you change the instance type definition?
@@ -3795,6 +3820,8 @@ Border Gateway Protocol (BGP)
 - [ ] Auto Scaling group.
 - [ ] Auto Scaling tags.
 - [x] Auto Scaling launch configuration.
+
+
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3805,6 +3832,8 @@ Border Gateway Protocol (BGP)
 - [ ] A user should manually create a launch configuration before creating an Auto Scaling group.
 - [ ] The launch configuration should be created manually from the AWS CL.
 
+![alt text](image-167.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Your company has multiple IT departments, each with their own VPC. Some VPCs are located within the same AWS account, and others in a different AWS account. You want to peer together all VPCs to enable the IT departments to have full access to each others' resources. There are certain limitations placed on VPC peering. Which of the following statements is incorrect in relation to VPC peering?
@@ -3813,6 +3842,8 @@ Border Gateway Protocol (BGP)
 - [x] You can have up to 3 VPC peering connections between the same two VPCs at the same time.
 - [ ] You cannot create a VPC peering connection between VPCs in different regions.
 - [ ] You have a limit on the number active and pending VPC peering connections that you can have per VP.
+
+![alt text](image-168.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3841,6 +3872,8 @@ Border Gateway Protocol (BGP)
 - [ ] AWS CloudHSM.
 - [x] AWS VPN CloudHub.
 
+![alt text](image-169.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You need to create a management network using network interfaces for a virtual private cloud (VPC) network. Which of the following statements is incorrect pertaining to Best Practices for ConfiguringNetwork Interfaces.
@@ -3850,14 +3883,9 @@ Border Gateway Protocol (BGP)
 - [ ] You can attach a network interface in one subnet to an instance in another subnet in the same VPC, however, both the network interface and the instance must reside in the same Availability Zone.
 - [x] Attaching another network interface to an instance is a valid method to increase or double the network bandwidth to or from the dual-homed instance.
 
-**[⬆ Back to Top](#table-of-contents)**
+![alt text](image-171.png)
 
-### A user has launched 10 EC2 instances inside a placement group. Which of the following statements is true in regards to what ability launching your instances into a VPC instead of EC2-Classic gives you?
-
-- [x] All of the things listed here.
-- [ ] Change security group membership for your instances while they're running.
-- [ ] Assign static private IP addresses to your instances that persist across starts and stops.
-- [ ] Define network interfaces, and attach one or more network interfaces to your instances.
+![alt text](image-170.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3883,6 +3911,9 @@ Border Gateway Protocol (BGP)
 ### You are working with a customer who has 10 TB of archival data that they want to migrate to Amazon Glacier. The customer has a 1-Mbps connection to the Internet. Which service or feature provides the fastest method of getting the data into Amazon Glacier?
 
 - [x] Amazon Glacier multipart upload.
+
+![alt text](image-172.png)
+
 - [ ] AWS Storage Gateway.
 - [ ] VM Import/Export.
 - [ ] AWS Import/Export.
@@ -3896,6 +3927,10 @@ Border Gateway Protocol (BGP)
 - [ ] Ports 25, 1433, 3389.
 - [ ] Ports 22, 1343, 3999.
 
+![alt text](image-173.png)
+
+![alt text](image-174.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### An EC2 instance is connected to an ENI (Elastic Network Interface) in one subnet. What happens to the data on an instance if the instance reboots (intentionally or unintentionally)?
@@ -3903,14 +3938,7 @@ Border Gateway Protocol (BGP)
 - [ ] Data will be lost.
 - [x] Data persists.
 
-**[⬆ Back to Top](#table-of-contents)**
-
-### Please select the Amazon EC2 resource which can be tagged.
-
-- [ ] Key pairs.
-- [ ] Elastic IP addresses.
-- [x] Placement groups.
-- [ ] Amazon EBS snapshots.
+![alt text](image-175.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3930,6 +3958,8 @@ Border Gateway Protocol (BGP)
 - [ ] Not possible, cannot be connected to 2 ENIs.
 - [ ] The EC2 instance follows the rules of the newer subnet.
 
+![alt text](image-176.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You have deployed a three-tier web application in a VPC with a CIDR block of 10.0.0.0/28. You initially deploy two web servers, two application servers, two database servers and one NAT instance for a total of seven EC2 instances. The web, application and database servers are deployed across two Availability Zones (AZs). You also deploy an ELB in front of the two web servers, and use Route 53 for DNS. Web traffic gradually increases in the first few days following the deployment, so you attempt to double the number of instances in each tier of the application to handle the new load. Unfortunately some of these new instances fail to launch. Which of the following could be the root cause? (Choose 2 answers)
@@ -3940,6 +3970,10 @@ Border Gateway Protocol (BGP)
 - [ ] AWS reserves one IP address in each subnet's CIDR block for Route 53 so you do not have enough addresses left to launch all of the new EC2 instances.
 - [x] AWS reserves the first four and the last IP address in each subnet's CIDR block so you do not have enough addresses left to launch all of the new EC2 instances.
 
+![alt text](image-177.png)
+
+![alt text](image-178.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Which of the following will cause an immediate DB instance reboot to occur?
@@ -3948,6 +3982,8 @@ Border Gateway Protocol (BGP)
 - [ ] You change the DB instance class, and Apply Immediately is set to false.
 - [ ] You change a static parameter in a DB parameter group.
 - [ ] You change the backup retention period for a DB instance from 0 to a nonzero value or from a nonzero value to 0, and Apply Immediately is set to false.
+
+![alt text](image-179.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3961,11 +3997,24 @@ Border Gateway Protocol (BGP)
 ### You are tasked with moving a legacy application from a virtual machine running Inside your datacenter to an Amazon VPC Unfortunately this app requires access to a number of on-premises services and no one who configured the app still works for your company. Even worse there's no documentation for it. What will allow the application running inside the VPC to reach back and access its internal dependencies without being reconfigured? (Choose 3 answers)
 
 - [x] An AWS Direct Connect link between the VPC and the network housing the internal services.
+
+![alt text](image-181.png)
+
 - [ ] An Internet Gateway to allow a VPN connection.
+
+![alt text](image-184.png)
+
 - [ ] An Elastic IP address on the VPC instance.
 - [x] An IP address space that does not conflict with the one on-premises.
+
+![alt text](image-183.png)
+
 - [ ] Entries in Amazon Route 53 that allow the Instance to resolve its dependencies' IP addresses.
 - [x] A VM Import of the current virtual machine.
+
+![alt text](image-182.png)
+
+![alt text](image-180.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -3976,13 +4025,18 @@ Border Gateway Protocol (BGP)
 - [ ] Copy the IAM role and associated policies to the new region and attach it to the instances.
 - [ ] Create an Amazon Machine Image (AMI) of the instance and copy it to the desired region using the AMI Copy feature.
 
+![alt text](image-185.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### If you want to launch Amazon Elastic Compute Cloud (EC2) instances and assign each instance a predetermined private IP address you should:
 
 - [ ] Launch the instance from a private Amazon Machine Image (AMI).
-- [x] Assign a group of sequential Elastic IP address to the instances.
-- [ ] Launch the instances in the Amazon Virtual Private Cloud (VPC).
+
+![alt text](image-186.png)
+
+- [ ] Assign a group of sequential Elastic IP address to the instances.
+- [x] Launch the instances in the Amazon Virtual Private Cloud (VPC).
 - [ ] Launch the instances in a Placement Group.
 - [ ] Use standard EC2 instances since each instance gets a private Domain Name Service (DNS) already.
 
@@ -4014,6 +4068,8 @@ Border Gateway Protocol (BGP)
 - [ ] Use a single-AZ RD5 My5QL instance to store the search index 33d the JPEG images use an EC2 instance to serve the website and translate user queries into 5Q
 - [ ] Use a CloudFront download distribution to serve the JPEGs to the end users and Install the current commercial search product, along with a Java Container Tor the website on EC2 instances and use Route 53 with DNS round-robin.
 
+![alt text](image-187.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A Provisioned IOPS volume must be at least [...] GB in size.
@@ -4022,6 +4078,8 @@ Border Gateway Protocol (BGP)
 - [ ] 50.
 - [ ] 20.
 - [x] 10.
+
+![alt text](image-188.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4036,10 +4094,12 @@ Border Gateway Protocol (BGP)
 
 ### A company has an AWS account that contains three VPCs (Dev, Test, and Prod) in the same region. Test is peered to both Prod and Dev. All VPCs have non-overlapping CIDR blocks. The company wants to push minor code releases from Dev to Prod to speed up time to market. Which of the following options helps the company accomplish this?
 
-- [ ] Create a new peering connection Between Prod and Dev along with appropriate routes.
+- [x] Create a new peering connection Between Prod and Dev along with appropriate routes.
 - [ ] Create a new entry to Prod in the Dev route table using the peering connection as the target.
 - [ ] Attach a second gateway to Dev. Add a new entry in the Prod route table identifying the gateway as the target.
-- [x] The VPCs have non-overlapping Cl DR blocks in the same account. The route tables contain local routes for all VPCs.
+- [ ] The VPCs have non-overlapping Cl DR blocks in the same account. The route tables contain local routes for all VPCs.
+
+![alt text](image-189.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4059,14 +4119,21 @@ Border Gateway Protocol (BGP)
 - [x] Yes. Amazon Redshift.
 - [ ] Yes. Your choice of relational AMIs on Amazon EC2 and EBS.
 
+![alt text](image-190.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You have set up an Elastic Load Balancer (ELB) with the usual default settings, which route each request independently to the application instance with the smallest load. However, someone has asked you to bind a user's session to a specific application instance so as to ensure that all requests coming from the user during the session will be sent to the same application instance. AWS has a feature to do this. What is it called?
 
 - [ ] Connection draining.
 - [ ] Proxy protocol.
+
+![alt text](image-191.png)
+
 - [ ] Tagging.
 - [x] Sticky session.
+
+![alt text](image-192.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4162,8 +4229,8 @@ Border Gateway Protocol (BGP)
 
 ### True or False: Manually created DB Snapshots are deleted after the DB Instance is deleted.
 
-- [x] True.
-- [ ] False.
+- [ ] True.
+- [x] False.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4212,15 +4279,6 @@ Border Gateway Protocol (BGP)
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Can you specify the security group that you created for a VPC when you launch an instance in EC2-Classic?
-
-- [ ] No, you can specify the security group created for EC2-Classic when you launch a VPC instance.
-- [ ] Yes.
-- [x] No.
-- [ ] No, you can specify the security group created for EC2-Classic to a non-VPC based instance only.
-
-**[⬆ Back to Top](#table-of-contents)**
-
 ### Which two methods increases the fault tolerance of the connection to VPC-1? (Choose 2 answers)
 
 - [ ] Establish a hardware VPN over the internet between VPC-2 and the on-premises network.
@@ -4228,6 +4286,8 @@ Border Gateway Protocol (BGP)
 - [ ] Establish a new AWS Direct Connect connection and private virtual interface in the same region as VPC-2.
 - [ ] Establish a new AWS Direct Connect connection and private virtual interface in a different AWS region than VPC-1.
 - [x] Establish a new AWS Direct Connect connection and private virtual interface in the same AWS region as VPC-1.
+
+![alt text](image-193.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4238,6 +4298,8 @@ Border Gateway Protocol (BGP)
 - [x] Configure Amazon CloudFront dynamic content support to enable caching of re-usable content from your site.
 - [x] Switch Amazon RDS database to the high memory extra large Instance type.
 - [ ] Set up a second installation in another region, and use the Amazon Route 53 latency-based routing feature to select the right region.
+
+![alt text](image-194.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4270,8 +4332,13 @@ Border Gateway Protocol (BGP)
 
 - [ ] STARTING.
 - [x] STOPPED.
+
+![alt text](image-195.png)
+
 - [ ] RUNNING.
 - [ ] WAITING.
+
+![alt text](image-196.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4279,8 +4346,8 @@ Border Gateway Protocol (BGP)
 
 - [ ] Use a public-facing load balancer per region to load-balance web traffic, and enable HTTP health checks.
 - [ ] Use a public-facing load balancer per region to load-balance web traffic, and enable sticky sessions.
-- [ ] Use Amazon Route 53, and apply a geolocation routing policy to distribute traffic across both regions.
-- [x] Use Amazon Route 53, and apply a weighted routing policy to distribute traffic across both regions.
+- [x] Use Amazon Route 53, and apply a geolocation routing policy to distribute traffic across both regions.
+- [ ] Use Amazon Route 53, and apply a weighted routing policy to distribute traffic across both regions.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4327,12 +4394,20 @@ Border Gateway Protocol (BGP)
 - [ ] You don't have the administrative burden of running your own data warehouse and dealing with setup, durability, monitoring, scaling, and patching.
 - [x] All answers listed are a reasonable response to his question.
 
+![alt text](image-197.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You can seamlessly join an EC2 instance to your directory domain. What connectivity do you need to be able to connect remotely to this instance?
 
 - [x] You must have IP connectivity to the instance from the network you are connecting from.
+
+![alt text](image-198.png)
+
 - [ ] You must have the correct encryption keys to connect to the instance remotely.
+
+![alt text](image-199.png)
+
 - [ ] You must have enough bandwidth to connect to the instance.
 - [ ] You must use MFA authentication to be able to connect to the instance remotely.
 
@@ -4352,7 +4427,13 @@ Border Gateway Protocol (BGP)
 - [x] Amazon EC2 placement groups.
 - [x] Enhanced networking.
 - [ ] Amazon PV AMI.
+
+![alt text](image-201.png)
+
 - [x] Amazon HVM AMI.
+
+![alt text](image-200.png)
+
 - [ ] Amazon Linux.
 - [ ] Amazon VPC.
 
