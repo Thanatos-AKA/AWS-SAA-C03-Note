@@ -4472,14 +4472,26 @@ Border Gateway Protocol (BGP)
 - [ ] General Purpose (SSD).
 - [ ] Magnetic or Provisioned IOPS (SSD).
 
+![alt text](image-202.png)
+
+![alt text](image-203.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Your company currently has a 2-tier web application running in an on-premises data center. You have experienced several infrastructure failures in the past two months resulting in significant financial losses. Your CIO is strongly agreeing to move the application to AWS. While working on achieving buy-in from the other company executives, he asks you to develop a disaster recovery plan to help improve Business continuity in the short term. He specifies a target Recovery Time Objective (RTO) of 4 hours and a Recovery Point Objective (RPO) of 1 hour or less. He also asks you to implement the solution within 2 weeks. Your database is 200GB in size and you have a 20Mbps Internet connection. How would you do this while minimizing costs?
 
 - [x] Create an EBS backed private AMI which includes a fresh install of your application. Develop a CloudFormation template which includes your AMI and the required EC2, AutoScaling, and ELB resources to support deploying the application across Multiple Availability Zones. Asynchronously replicate transactions from your on-premises database to a database instance in AWS across a secure VPN connection.
+
+![alt text](image-206.png)
+
 - [ ] Deploy your application on EC2 instances within an Auto Scaling group across multiple availability zones. Asynchronously replicate transactions from your on-premises database to a database instance in AWS across a secure VPN connection.
 - [ ] Create an EBS backed private AMI which includes a fresh install of your application. Setup a script in your data center to backup the local database every 1 hour and to encrypt and copy the resulting file to an S3 bucket using multi-part upload.
+
+![alt text](image-204.png)
+
 - [ ] Install your application on a compute-optimized EC2 instance capable of supporting the application's average load. Synchronously replicate transactions from your on-premises database to a database instance in AWS across a secure Direct Connect connection.
+
+![alt text](image-205.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4492,41 +4504,57 @@ Border Gateway Protocol (BGP)
 - [x] Create an Amazon EBS volume from a gateway snapshot, and mount it to an Amazon EC2 instance.
 - [x] Launch an AWS Storage Gateway virtual iSCSI device at the branch office, and restore from a gateway snapshot.
 
+![alt text](image-207.png)
+
+![alt text](image-208.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Your customer is willing to consolidate their log streams (access logs, application logs, security logs, etc.) in one single system. Once consolidated, the customer wants to analyze these logs in real-time based on heuristics. From time to time, the customer needs to validate heuristics, which requires going back to data samples extracted from the last 12 hours. What is the best approach to meet your customer's requirements?
 
 - [ ] Send all the log events to Amazon SQS. Setup an Auto Scaling group of EC2 servers to consume the logs and apply the heuristics.
+
+![alt text](image-210.png)
+
 - [x] Send all the log events to Amazon Kinesis. Develop a client process to apply heuristics on the logs.
+
+![alt text](image-211.png)
+
 - [ ] Configure Amazon Cloud Trail to receive custom logs. Use EMR to apply heuristics to the logs.
 - [ ] Setup an Auto Scaling group of EC2 syslogd servers. Store the logs on S3. Use EMR to apply heuristics on the logs.
 
+![alt text](image-209.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
-### Can the string value of 'Key' be prefixed with laws?
+### Can the string value of 'Key' be prefixed with aws?
 
 - [x] No.
 - [ ] Only for EC2 not S3.
 - [ ] Yes.
 - [ ] Only for S3 not EC.
 
+![alt text](image-212.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are configuring your company's application to use Auto Scaling and need to move user state information. Which of the following AWS services provides a shared data store with durability and low latency?
 
 - [ ] AWS ElastiCache Memcached.
-- [x] Amazon Simple Storage Service.
+- [ ] Amazon Simple Storage Service.
 - [ ] Amazon EC2 instance storage.
-- [ ] Amazon DynamoDB.
+- [x] Amazon DynamoDB.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Your company previously configured a heavily used, dynamically routed VPN connection between your on-premises data center and AWS. You recently provisioned a DirectConnect connection and would like to start using the new connection. After configuring DirectConnect settings in the AWS Console, which of the following options will provide the most seamless transition for your users?
 
 - [ ] Delete your existing VPN connection to avoid routing loops. Configure your DirectConnect router with the appropriate settings and verify network traffic is leveraging DirectConnect.
-- [ ] Configure your DirectConnect router with a higher BGP priority than your VPN router. Verify network traffic is leveraging DirectConnect and then delete your existing VPN connection.
+- [x] Configure your DirectConnect router with a higher BGP priority than your VPN router. Verify network traffic is leveraging DirectConnect and then delete your existing VPN connection.
 - [ ] Update your VPC route tables to point to the DirectConnect connection. Configure your DirectConnect router with the appropriate settings. Verify network traffic is leveraging DirectConnect and then delete the VPN connection.
-- [x] Configure your DirectConnect router. Update your VPC route tables to point to the DirectConnect connection. Configure your VPN connection with a higher BGP priority and verify network traffic is leveraging the DirectConnect connection.
+- [ ] Configure your DirectConnect router. Update your VPC route tables to point to the DirectConnect connection. Configure your VPN connection with a higher BGP priority and verify network traffic is leveraging the DirectConnect connection.
+
+![alt text](image-213.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4542,10 +4570,15 @@ Border Gateway Protocol (BGP)
 ### You deployed your company website using Elastic Beanstalk and you enabled log file rotation to S3. An Elastic MapReduce job is periodically analyzing the logs on S3 to build a usage dashboard that you share with your CIO. You recently improved overall performance of the website using CloudFront for dynamic content delivery and your website as the origin. After this architectural change, the usage dashboard shows that the traffic on your website dropped by an order of magnitude. How do you fix your usage dashboard?
 
 - [x] Enable CloudFront to deliver access logs to S3 and use them as input of the Elastic MapReduce job.
+
+![alt text](image-215.png)
+
 - [ ] Turn on Cloud Trail and use trail log tiles on S3 as input of the Elastic MapReduce job.
 - [ ] Change your log collection process to use Cloud Watch ELB metrics as input of the Elastic Map Reduce job.
 - [ ] Use Elastic Beanstalk 'Rebuild Environment' option to update log delivery to the Elastic Map Reduce job.
 - [ ] Use Elastic Beanstalk 'Restart App server(s)' option to update log delivery to the Elastic Map Reduce job.
+
+![alt text](image-214.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4555,6 +4588,8 @@ Border Gateway Protocol (BGP)
 - [x] Modify the application to write to an Amazon SQS queue and develop a worker process to flush the queue to the on-premises database.
 - [ ] Modify the application to use DynamoDB to feed an EMR cluster which uses a map function to write to the on-premises database.
 - [ ] Provision an RDS read-replica database on AWS to handle the writes and synchronize the two databases using Data Pipeline.
+
+![alt text](image-216.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
