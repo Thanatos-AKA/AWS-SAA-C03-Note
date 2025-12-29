@@ -4600,6 +4600,8 @@ Border Gateway Protocol (BGP)
 - [ ] With AWS CloudTrail you can get a history of S3 logfiles for your account.
 - [ ] With AWS CloudTrail you can get a history of CloudFormation JSON scripts used for your account.
 
+![alt text](image-217.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Every user you create in the IAM system starts with [...].
