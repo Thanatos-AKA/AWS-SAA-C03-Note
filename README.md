@@ -4623,20 +4623,34 @@ Border Gateway Protocol (BGP)
 
 ### You are designing an SSUTLS solution that requires HTTPS clients to be authenticated by the Web server using client certificate authentication. The solution must be resilient. Which of the following options would you consider for configuring the web server infrastructure? (Choose 2 answers)
 
-- [x] Configure ELB with TCP listeners on TCP/4d3. And place the Web servers behind it.
+- [x] Configure ELB with TCP listeners on TCP/443. And place the Web servers behind it.
+
+![alt text](image-218.png)
+
 - [x] Configure your Web servers with EIPS Place the Web servers in a Route 53 Record Set and configure health checks against all Web servers.
+
+![alt text](image-219.png)
+
 - [ ] Configure ELB with HTTPS listeners, and place the Web servers behind it.
 - [ ] Configure your web servers as the origins for a CloudFront distribution. Use custom SSL certificates on your CloudFront distribution.
+
+![alt text](image-220.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Which of the following are use cases for Amazon DynamoDB? (Choose 3 answers)
 
 - [ ] Storing BLOB data.
+
+![alt text](image-221.png)
+
 - [x] Managing web sessions.
 - [x] Storing JSON documents.
 - [x] Storing metadata for Amazon S3 objects.
 - [ ] Running relational joins and complex updates.
+
+![alt text](image-222.png)
+
 - [ ] Storing large amounts of infrequently accessed data.
 
 **[⬆ Back to Top](#table-of-contents)**
