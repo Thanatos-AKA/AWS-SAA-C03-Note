@@ -4671,6 +4671,8 @@ Border Gateway Protocol (BGP)
 - [x] All of the answers listed here.
 - [ ] Load Balancer IP address.
 
+![alt text](image-223.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### An organization has developed a mobile application which allows end users to capture a photo on their mobile device, and store it inside an application. The application internally uploads the data to AWS S3. The organization wants each user to be able to directly upload data to S3 using their Google ID. How will the mobile app allow this?
@@ -4679,6 +4681,8 @@ Border Gateway Protocol (BGP)
 - [ ] It is not possible to connect to AWS S3 with a Google I
 - [ ] Create an IAM user every time a user registers with their Google ID and use IAM to upload files to S3.
 - [ ] Create a bucket policy with a condition which allows everyone to upload if the login ID has a Google part to it.
+
+![alt text](image-224.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4689,6 +4693,8 @@ Border Gateway Protocol (BGP)
 - [ ] 50.
 - [x] 10.
 
+![alt text](image-225.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You need to set up a security certificate for a client's e-commerce website as it will use the HTTPS protocol. Which of the below AWS services do you need to access to manage your SSL server certificate?
@@ -4698,6 +4704,8 @@ Border Gateway Protocol (BGP)
 - [ ] AWS CloudFormation.
 - [ ] Amazon Route 53.
 
+![alt text](image-226.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### After setting up a Virtual Private Cloud (VPC) network, a more experienced cloud engineer suggests that to achieve low network latency and high network throughput you should look into setting up a placement group. You know nothing about this, but begin to do some research about it and are especially curious about its limitations. Which of the below statements is wrong in describing the limitations of a placement group?
@@ -4705,7 +4713,12 @@ Border Gateway Protocol (BGP)
 - [ ] Although launching multiple instance types into a placement group is possible, this reduces the likelihood that the required capacity will be available for your launch to succeed.
 - [x] A placement group can span multiple Availability Zones.
 - [ ] You can't move an existing instance into a placement group.
+
+![alt text](image-231.png)
+
 - [ ] A placement group can span peered VPCs.
+
+![alt text](image-228.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4713,6 +4726,10 @@ Border Gateway Protocol (BGP)
 
 - [x] True.
 - [ ] False.
+
+![alt text](image-229.png)
+
+![alt text](image-230.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4732,15 +4749,25 @@ Border Gateway Protocol (BGP)
 - [ ] Instances that you launch into a default subnet don't receive any ip addresses and you need to define them manually.
 - [ ] Instances that you launch into a default subnet receive a public IP address and 5 private IP addresses.
 
+![alt text](image-232.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### For which of the following use cases are Simple Workflow Service (SWF) and Amazon EC2 an appropriate solution? (Choose 2 answers)
 
 - [ ] Using as an endpoint to collect thousands of data points per hour from a distributed fleet of sensors.
+
+![alt text](image-233.png)
+
 - [x] Managing a multi-step and multi-decision checkout process of an e-commerce website.
 - [x] Orchestrating the execution of distributed and auditable business processes.
 - [ ] Using as an SNS (Simple Notification Service) endpoint to trigger execution of video transcoding jobs.
+
+![alt text](image-234.png)
+
 - [ ] Using as a distributed session store for your web application.
+
+![alt text](image-235.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4751,6 +4778,8 @@ Border Gateway Protocol (BGP)
 - [ ] Compute-optimized C4.
 - [x] Compute-optimized C3.
 - [ ] Storage-optimized 12.
+
+![alt text](image-236.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4777,14 +4806,24 @@ Border Gateway Protocol (BGP)
 - [ ] Stateful instances for the web and application tier in an autoscaling group monitored with CloudWatch and multi-AZ RDS.
 - [ ] Stateless instances for the web and application tier synchronized using ElastiCache Memcached in an autoscaling group monitored with CloudWatch and multi-AZ RDS.
 
+![alt text](image-237.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### In Amazon AWS, which of the following statements is true of key pairs?
 
 - [ ] Key pairs are used only for Amazon SDKs.
 - [x] Key pairs are used only for Amazon EC2 and Amazon CloudFront.
+
+![alt text](image-240.png)
+
 - [ ] Key pairs are used only for Elastic Load Balancing and AWS IA.
+
+![alt text](image-238.png)
+
 - [ ] Key pairs are used for all Amazon services.
+
+![alt text](image-239.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4794,6 +4833,8 @@ Border Gateway Protocol (BGP)
 - [ ] A virtual server with a huge amount of memory.
 - [x] A managed In-memory cache service.
 - [ ] An Amazon EC2 instance with the Memcached software already pre-installed.
+
+![alt text](image-241.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4813,6 +4854,8 @@ Border Gateway Protocol (BGP)
 - [ ] Luna HS.
 - [ ] Luna SA HS.
 
+![alt text](image-242.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### An organization has a statutory requirement to protect the data at rest for the S3 objects. Which of the below mentioned options need not be enabled by the organization to achieve data security?
@@ -4831,13 +4874,15 @@ Border Gateway Protocol (BGP)
 - [ ] Utilize SQS to collect the inbound sensor data, analyze the data from SQS with Amazon Kinesis and save the results to a Microsoft SQL Server RDS instance.
 - [ ] Utilize EMR to collect the inbound sensor data, analyze the data from EMR with Amazon Kinesis and save the results to DynamoDB.
 
+![alt text](image-243.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Which of the following approaches provides the lowest cost for Amazon Elastic Block Store snapshots while giving you the ability to fully restore data?
 
-- [x] Maintain two snapshots: the original snapshot and the latest incremental snapshot.
+- [ ] Maintain two snapshots: the original snapshot and the latest incremental snapshot.
 - [ ] Maintain a volume snapshot; subsequent snapshots will overwrite one another
-- [ ] Maintain a single snapshot the latest snapshot is both Incremental and complete.
+- [x] Maintain a single snapshot the latest snapshot is both Incremental and complete.
 - [ ] Maintain the most current snapshot, archive the original and incremental to Amazon Glacier.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -4863,8 +4908,8 @@ Border Gateway Protocol (BGP)
 ### You have recently joined a startup company building sensors to measure street noise and air quality in urban areas. The company has been running a pilot deployment of around 100 sensors for 3 months. Each sensor uploads 1KB of sensor data every minute to a backend hosted on AWS. During the pilot, you measured a peak of 10 IOPS on the database, and you stored an average of 3GB of sensor data per month in the database. The current deployment consists of a load-balanced auto scaled Ingestion layer using EC2 instances and a PostgreSQL RDS database with 500GB standard storage. The pilot is considered a success and your CEO has managed to get the attention of some potential investors. The business plan requires a deployment of at least 100K sensors which needs to be supported by the backend. You also need to store sensor data for at least two years to be able to compare year over year improvements. To secure funding, you have to make sure that the platform meets these requirements and leaves room for further scaling. Which setup will meet the requirements?
 
 - [ ] Add an SQS queue to the ingestion layer to buffer writes to the RDS instance.
-- [ ] Ingest data into a DynamoDB table and move old data to a Redshift cluster.
-- [x] Replace the RDS instance with a 6 node Redshift cluster with 96TB of storage.
+- [x] Ingest data into a DynamoDB table and move old data to a Redshift cluster.
+- [ ] Replace the RDS instance with a 6 node Redshift cluster with 96TB of storage.
 - [ ] Keep the current architecture but upgrade RDS storage to 3TB and 10K provisioned IOPS.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -4876,6 +4921,8 @@ Border Gateway Protocol (BGP)
 - [ ] You can use the report to audit the effects of credential lifecycle requirements, such as password rotation.
 - [ ] You can generate a credential report as often as once every four hours.
 
+![alt text](image-244.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### What is the maximum response time for a Business level Premium Support case?
@@ -4885,14 +4932,16 @@ Border Gateway Protocol (BGP)
 - [ ] 12 hours.
 - [ ] 10 minutes.
 
+![alt text](image-246.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Per the AWS Acceptable Use Policy, penetration testing of EC2 instances
 
 - [ ] May be performed by AWS, and will be performed by AWS upon customer request.
-- [x] May be performed by AWS, and is periodically performed by AWS.
+- [ ] May be performed by AWS, and is periodically performed by AWS.
 - [ ] Are expressly prohibited under all circumstances.
-- [ ] May be performed by the customer on their own instances with prior authorization from AWS.
+- [x] May be performed by the customer on their own instances with prior authorization from AWS.
 - [ ] May be performed by the customer on their own instances, only if performed from EC2 instances.
 
 **[⬆ Back to Top](#table-of-contents)**
