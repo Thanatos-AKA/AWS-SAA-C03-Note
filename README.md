@@ -4960,14 +4960,18 @@ Border Gateway Protocol (BGP)
 - [x] True.
 - [ ] False.
 
+![alt text](image-247.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You decide that you need to create a number of Auto Scaling groups to try and save some money as you have noticed that at certain times most of your EC2 instances are not being used. By default, what is the maximum number of Auto Scaling groups that AWS will allow you to create?
 
 - [ ] 12.
 - [ ] Unlimited.
-- [x] 20.
+- [x] 200 - 500.
 - [ ] 2.
+
+![alt text](image-248.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -4978,6 +4982,8 @@ Border Gateway Protocol (BGP)
 - [x] It is possible to implement your own health check system and then send the instance's health information directly from your system to Cloud Watch.
 - [ ] It is possible to implement your own health check system and then send the instance's health information directly from your system to Cloud Watch but only in the US East (Virginia) region.
 
+![alt text](image-249.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You've been brought in as solutions architect to assist an enterprise customer with their migration of an e-commerce platform to Amazon Virtual Private Cloud (VPC) The previous architect has already deployed a 3-tier VPC, The configuration is as follows. VPC: vpc-2f8bc447. IGW: igw-2d8bc445. NACL: ad-208bc448. 5ubnets and Route Tables: Web servers: subnet-258bc44d. Application servers: subnet-248bc44c. Database servers: subnet-9189c6f9. Route Tables: rrb-218bc449, rtb-238bc44b. Associations: subnet-258bc44d: rtb-218bc449, subnet-248bc44c: rtb-238bc44b, subnet-9189c6f9: rtb-238bc44b. You are now ready to begin deploying EC2 instances into the VPC Web servers must have direct access to the internet Application and database servers cannot have direct access to the internet. Which configuration below will allow you the ability to remotely administer your application and database servers, as well as allow these servers to retrieve updates from the Internet?
@@ -4987,11 +4993,18 @@ Border Gateway Protocol (BGP)
 - [ ] Create a bastion and NAT instance in subnet-248bc44c, and add a route from rtb- 238bc44b to subnet-258bc44d.
 - [ ] Create a bastion and NAT instance in subnet-258bc44d, add a route from rtb-238bc44b to lgw- 2d8bc445, and a new NACL that allows access between subnet-258bc44d and subnet -248bc44c.
 
+![alt text](image-251.png)
+
+![alt text](image-250.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### After deciding that EMR will be useful in analysing vast amounts of data for a gaming website that you are architecting you have just deployed an Amazon EMR Cluster and wish to monitor the cluster performance. Which of the following tools cannot be used to monitor the cluster performance?
 
 - [x] Kinesis.
+
+![alt text](image-252.png)
+
 - [ ] Ganglia.
 - [ ] CloudWatch Metrics.
 - [ ] Hadoop Web Interfaces.
@@ -5011,6 +5024,9 @@ Border Gateway Protocol (BGP)
 
 - [ ] Continually send transaction logs from your master database to an S3 bucket and generate the reports off the S3 bucket using S3 byte range requests.
 - [ ] Generate the reports by querying the synchronously replicated standby RDS MySQL instance maintained through Multi-AZ.
+
+![alt text](image-253.png)
+
 - [x] Launch a RDS Read Replica connected to your Multi-AZ master database and generate reports by querying the Read Replica.
 - [ ] Generate the reports by querying the ElastiCache database caching tier.
 
@@ -5020,8 +5036,10 @@ Border Gateway Protocol (BGP)
 
 - [ ] Only via API.
 - [ ] Only via Console.
-- [x] Yes.
-- [ ] No.
+- [ ] Yes.
+- [x] No.
+
+![alt text](image-254.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5031,6 +5049,8 @@ Border Gateway Protocol (BGP)
 - [ ] 443.
 - [ ] 80.
 - [ ] 1158.
+
+![alt text](image-255.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5068,14 +5088,16 @@ Border Gateway Protocol (BGP)
 - [ ] functional group.
 - [ ] relational group.
 
+![alt text](image-256.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### In Amazon EC2, partial instance-hours are billed [...].
 
-- [ ] per second used in the hour.
+- [x] per second used in the hour.
 - [ ] per minute used.
 - [ ] by combining partial segments into full hours.
-- [x] as full hours.
+- [ ] as full hours.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5093,14 +5115,26 @@ Border Gateway Protocol (BGP)
 - [ ] True.
 - [x] False.
 
+![alt text](image-257.png)
+
+![alt text](image-258.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You need to create a JSON-formatted text file for AWS CloudFormation. This is your first template and the only thing you know is that the templates include several major sections but there is only one that is required for it to work. What is the only section required?
 
 - [ ] Mappings.
+
+![alt text](image-259.png)
+
 - [ ] Outputs.
+
+![alt text](image-260.png)
+
 - [x] Resources.
 - [ ] Conditions.
+
+![alt text](image-261.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
