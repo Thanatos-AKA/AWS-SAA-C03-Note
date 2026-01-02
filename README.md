@@ -5266,9 +5266,14 @@ Border Gateway Protocol (BGP)
 ### You currently operate a web application in the AWS US-East region. The application runs on an autoscaled layer of EC2 instances and an RDS Multi-AZ database. Your IT security compliance officer has tasked you to develop a reliable and durable logging solution to track changes made to your EC2, IAM, and RDS resources. The solution must ensure the integrity and confidentiality of your log data. Which of these solutions would you recommend?
 
 - [x] Create a new CloudTrail trail with one new S3 bucket to store the logs and with the global services option selected. Use IAM roles, S3 bucket policies, and Multi Factor Authentication (MFA) Delete on the S3 bucket that stores your logs.
+
+![alt text](image-273.png)
+
 - [ ] Create a new CloudTrail with one new S3 bucket to store the logs. Configure SNS to send log file delivery notifications to your management system. Use IAM roles and S3 bucket policies on the S3 bucket that stores your logs.
 - [ ] Create a new CloudTrail trail with an existing S3 bucket to store the logs and with the global services option selected. Use S3 ACLs and Multi Factor Authentication (MFA) Delete on the S3 bucket that stores your logs.
 - [ ] Create three new CloudTrail trails with three new S3 buckets to store the logs: one for the AWS Management console, one for AWS SDKs, and one for command line tools. Use IAM roles and S3 bucket policies on the S3 buckets that store your logs.
+
+![alt text](image-274.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5279,6 +5284,8 @@ Border Gateway Protocol (BGP)
 - [ ] It does support in-place non-atomic updates.
 - [ ] It is not defined.
 
+![alt text](image-275.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Which of the following is true of Amazon EC2 security group?
@@ -5287,6 +5294,10 @@ Border Gateway Protocol (BGP)
 - [ ] You can modify the rules for a security group only if the security group controls the traffic for just one instance.
 - [ ] You can modify the rules for a security group only when a new instance is created.
 - [x] You can modify the rules for a security group at any time.
+
+![alt text](image-276.png)
+
+![alt text](image-277.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5314,6 +5325,8 @@ Border Gateway Protocol (BGP)
 - [ ] This is configurable.
 - [x] True.
 
+![alt text](image-278.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are working with a customer who is using Chef configuration management in their data center. Which service is designed to let the customer leverage existing Chef recipes in AWS?
@@ -5323,12 +5336,18 @@ Border Gateway Protocol (BGP)
 - [ ] AWS CloudFormation.
 - [x] AWS OpsWorks.
 
+![alt text](image-279.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Does Amazon RDS for SQL Server currently support importing data into the msdb database?
 
 - [ ] Yes.
 - [x] No.
+
+![alt text](image-280.png)
+
+![alt text](image-281.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5339,13 +5358,21 @@ Border Gateway Protocol (BGP)
 - [x] Create a snapshot of the volume, and create a new volume from the snapshot in the other AZ.
 - [ ] Detach the volume, then use the ec2-migrate-voiume command to move it to another AZ.
 
+![alt text](image-282.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Having set up a website to automatically be redirected to a backup website if it fails, you realize that there are different types of failovers that are possible. You need all your resources to be available the majority of the time. Using Amazon Route 53 which configuration would best suit this requirement?
 
 - [x] Active-active failover.
+
+![alt text](image-283.png)
+
 - [ ] None. Route 53 can't failover.
 - [ ] Active-passive failover.
+
+![alt text](image-284.png)
+
 - [ ] Active-active-passive and other mixed configurations.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -5362,8 +5389,10 @@ Border Gateway Protocol (BGP)
 ### Is decreasing the storage size of a DB Instance permitted?
 
 - [ ] Depends on the ROMS used.
-- [x] Yes.
-- [ ] No.
+- [ ] Yes.
+- [x] No.
+
+![alt text](image-285.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5383,6 +5412,8 @@ Border Gateway Protocol (BGP)
 - [ ] 4.
 - [x] 1.
 
+![alt text](image-286.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Is the encryption of connections between my application and my DB Instance using SSL for the MySQL server engines available?
@@ -5391,6 +5422,10 @@ Border Gateway Protocol (BGP)
 - [ ] Only in VPC.
 - [ ] Only in certain regions.
 - [ ] No.
+
+![alt text](image-287.png)
+
+![alt text](image-288.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5401,6 +5436,8 @@ Border Gateway Protocol (BGP)
 - [ ] Deferred Billing.
 - [ ] Aggregated Billing.
 
+![alt text](image-289.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Regarding Amazon Route 53, if your application is running on Amazon EC2 instances in two or more Amazon EC2 regions and if you have more than one Amazon EC2 instance in one or more regions, you can use [...] to route traffic to the correct region and then use [...] route traffic to instances within the region, based on probabilities that you specify.
@@ -5409,6 +5446,8 @@ Border Gateway Protocol (BGP)
 - [x] latency-based routing; weighted resource record sets.
 - [ ] weighted-based routing; weighted resource record sets.
 - [ ] latency-based routing; alias resource record sets.
+
+![alt text](image-290.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5427,14 +5466,16 @@ Border Gateway Protocol (BGP)
 - [ ] Amazon Simple Notification Service (SNS).
 - [ ] Amazon Simple Storage Service (S3).
 
+![alt text](image-291.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A customer is hosting their company website on a cluster of web servers that are behind a public facing load balancer. The customer also uses Amazon Route 53 to manage their public DNS. How should the customer configure the DNS zone apex record to point to the load balancer?
 
 - [ ] Create an A record pointing to the IP address of the load balancer.
 - [ ] Create a CNAME record pointing to the load balancer DNS name.
-- [x] Create a CNAME record aliased to the load balancer DNS name.
-- [ ] Create an A record aliased to the load balancer DNS name.
+- [ ] Create a CNAME record aliased to the load balancer DNS name.
+- [x] Create an A record aliased to the load balancer DNS name.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5443,14 +5484,18 @@ Border Gateway Protocol (BGP)
 - [ ] True.
 - [x] False.
 
+![alt text](image-292.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Which of the following features ensures even distribution of traffic to Amazon EC2 instances in multiple Availability Zones registered with a load balancer?
 
-- [x] Elastic Load Balancing request routing.
+- [ ] Elastic Load Balancing request routing.
 - [ ] An Amazon Route 53 weighted routing policy.
-- [ ] Elastic Load Balancing cross-zone load balancing.
+- [x] Elastic Load Balancing cross-zone load balancing.
 - [ ] An Amazon Route 53 latency routing policy.
+
+![alt text](image-293.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5467,6 +5512,9 @@ Border Gateway Protocol (BGP)
 
 - [ ] M3 instances are less expensive than M1 instances.
 - [x] M3 instances are configured with more swap memory than M1 instances.
+
+![alt text](image-294.png)
+
 - [ ] M3 instances provide better, more consistent performance that M1 instances for most use-cases.
 - [ ] M3 instances also offer SSD-based instance storage that delivers higher I/O performance.
 
@@ -5484,9 +5532,12 @@ Border Gateway Protocol (BGP)
 - [ ] CloudTrail is enabled globally.
 - [ ] CloudTrail is enabled by default.
 - [x] CloudTrail is enabled on a per-region basis.
-- [x] CloudTrail is enabled on a per-service basis.
+- [ ] CloudTrail is enabled on a per-service basis.
 - [x] Logs can be delivered to a single Amazon S3 bucket for aggregation.
-- [ ] CloudTrail is enabled for all available services within a region.
+- [x] CloudTrail is enabled for all available services within a region.
+
+![alt text](image-295.png)
+
 - [ ] Logs can only be processed and delivered to the region in which they are generated.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -5513,18 +5564,23 @@ Border Gateway Protocol (BGP)
 ### A customer has established an AWS Direct Connect connection to AWS. The link is up and routes are being advertised from the customer's end, however the customer is unable to connect from EC2 instances inside its VPC to servers residing in its datacenter. Which of the following options provide a viable solution to remedy this situation? (Choose 2 answers)
 
 - [ ] Add a route to the route table with an IPsec VPN connection as the target.
-- [x] Enable route propagation to the virtual pinnate gateway (VGW).
+- [x] Enable route propagation to the virtual private gateway (VGW).
 - [ ] Enable route propagation to the customer gateway (CGW).
 - [ ] Modify the route table of all Instances using the 'route' command.
+
+![alt text](image-296.png)
+
 - [x] Modify the Instances VPC subnet route table by adding a route back to the customer's on-premises environment.
+
+![alt text](image-297.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### While creating a network in the VPC, which of the following is true of a NAT device?
 
 - [ ] You have to administer the NAT Gateway Service provided by AW
-- [x] You can choose to use any of the three kinds of NAT devices offered by AWS for special purposes.
-- [ ] You can use a NAT device to enable instances in a private subnet to connect to the Internet.
+- [ ] You can choose to use any of the three kinds of NAT devices offered by AWS for special purposes.
+- [x] You can use a NAT device to enable instances in a private subnet to connect to the Internet.
 - [ ] You are recommended to use AWS NAT instances over NAT gateways, as the instances provide better availability and bandwidth.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -5532,6 +5588,9 @@ Border Gateway Protocol (BGP)
 ### Which of the following statements is NOT true about using Elastic IP Address (EIP) in EC2-Classic and EC2-VPC platforms?
 
 - [x] In the EC2-VPC platform, the Elastic IP Address (EIP) does not remain associated with the instance when you stop it.
+
+![alt text](image-298.png)
+
 - [ ] In the EC2-Classic platform, stopping the instance disassociates the Elastic IP Address (EIP) from it.
 - [ ] In the EC2-VPC platform, if you have attached a second network interface to an instance, when you disassociate the Elastic IP Address (EIP) from that instance, a new public IP address is not assigned to the instance automatically; you'll have to associate an EIP with it manually.
 - [ ] In the EC2-Classic platform, if you disassociate an Elastic IP Address (EIP) from the instance, the instance is automatically assigned a new public IP address within a few minutes.
@@ -5545,6 +5604,8 @@ Border Gateway Protocol (BGP)
 - [ ] 5 minutes.
 - [ ] 2 hours.
 
+![alt text](image-299.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### What does the following command do with respect to the Amazon EC2 security groups? ec2-create-group CreateSecurityGroup
@@ -5556,20 +5617,11 @@ Border Gateway Protocol (BGP)
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### You are in the process of moving your friend's WordPress site onto AWS to try and save him some money, and you have told him that he should probably also move his domain name. He asks why he can't leave his domain name where it is and just have his infrastructure on AWS. What would be an incorrect response to his question?
-
-- [ ] Route 53 offers low query latency for your end users.
-- [ ] Route 53 is designed to automatically answer queries from the optimal location depending on network conditions.
-- [ ] The globally distributed nature of AWS's DNS servers helps ensure a consistent ability to route your end users to your application.
-- [x] Route 53 supports Domain Name System Security Extensions (DNSSEC).
-
-**[⬆ Back to Top](#table-of-contents)**
-
 ### Which of the following are characteristics of a reserved instance? (Choose 3 answers)
 
-- [x] It can be migrated across Availability Zones.
+- [ ] It can be migrated across Availability Zones.
 - [ ] It is specific to an Amazon Machine Image (AMI).
-- [ ] It can be applied to instances launched by Auto Scaling.
+- [x] It can be applied to instances launched by Auto Scaling.
 - [x] It is specific to an instance Type.
 - [x] It can be used to lower Total Cost of Ownership (TCO) of a system.
 
@@ -5581,6 +5633,8 @@ Border Gateway Protocol (BGP)
 - [ ] Instance with the nearest billing hour in US-East-1B.
 - [x] Instance with the nearest billing hour in US-East-1A.
 - [ ] Random instance from US-East-1B.
+
+![alt text](image-300.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
