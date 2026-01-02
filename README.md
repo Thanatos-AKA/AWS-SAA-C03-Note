@@ -5142,7 +5142,13 @@ Border Gateway Protocol (BGP)
 
 - [ ] Configure the EC2 instance with a stop instance to terminate it.
 - [ ] Configure the EC2 instance with ELB to terminate the instance when it remains idle.
+
+![alt text](image-263.png)
+
 - [x] Configure the Cloud Watch alarm on the instance that should perform the termination action once the instance is idle.
+
+![alt text](image-262.png)
+
 - [ ] Configure the Auto Scaling schedule activity that terminates the instance after 7 days.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -5154,14 +5160,23 @@ Border Gateway Protocol (BGP)
 - [x] A single Amazon S3 bucket.
 - [ ] Multiple instance stores.
 
+![alt text](image-264.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Your company has recently extended its datacenter into a VPC on AWS to add burst computing capacity as needed Members of your Network Operations Center need to be able to go to the AWSManagement Console and administer Amazon EC2 instances as necessary You don't want to create new IAM users for each NOC member and make those users sign in again to the AWS Management Console Which option below will meet the needs for your NOC members?
 
 - [ ] Use OAuth 2 0 to retrieve temporary AWS security credentials to enable your NOC members to sign in to the AWS Management Console.
+
+![alt text](image-267.png)
+
 - [ ] Use web Identity Federation to retrieve AWS temporary security credentials to enable your NOC members to sign in to the AWS Management Console.
-- [ ] Use your on-premises SAML 2.0-compliant identity provider (IOP) to grant the NOC members federated access to the AWS Management Console via the AWS sing le sign-on (550) endpoint.
-- [x] Use your on-premises SAML2.0-compliam identity provider (IOP) to retrieve temporary security credentials to enable NOC members to sign in to the AWS Management Console.
+- [x] Use your on-premises SAML 2.0-compliant identity provider (IOP) to grant the NOC members federated access to the AWS Management Console via the AWS sing le sign-on (550) endpoint.
+- [ ] Use your on-premises SAML2.0-compliam identity provider (IOP) to retrieve temporary security credentials to enable NOC members to sign in to the AWS Management Console.
+
+![alt text](image-266.png)
+
+![alt text](image-265.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5171,6 +5186,8 @@ Border Gateway Protocol (BGP)
 - [ ] HTTP, HTTPS, TCP, SSL and SSH.
 - [x] HTTP, HTTPS, TCP, and SSL.
 - [ ] HTTP, HTTPS, TCP, SSL and SFTP.
+
+![alt text](image-268.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5183,21 +5200,16 @@ Border Gateway Protocol (BGP)
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### A user has created a subnet in VPC and launched an EC2 instance within it. The user has not selected the option to assign the IP address while launching the instance. The user has 3 elastic IPs and is trying to assign one of the Elastic IPs to the VPC instance from the console. The console does not show any instance in the IP assignment screen. What is a possible reason that the instance is unavailable in the assigned IP console?
-
-- [ ] The IP address may be attached to one of the instances.
-- [ ] The IP address belongs to a different zone than the subnet zone.
-- [ ] The user has not created an internet gateway.
-- [x] The IP addresses belong to EC2 Classic; so they cannot be assigned to VPC.
-
-**[⬆ Back to Top](#table-of-contents)**
-
 ### Will I be alerted when automatic fail over occurs?
 
 - [ ] Only if SNS configured.
 - [x] Yes.
 - [ ] No.
 - [ ] Only if Cloud watch configured.
+
+![alt text](image-269.png)
+
+![alt text](image-270.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5212,9 +5224,12 @@ Border Gateway Protocol (BGP)
 
 ### Which of the following requires a custom Cloud Watch metric to monitor?
 
-- [ ] Memory Utilization of an EC2 instance.
+- [x] Memory Utilization of an EC2 instance.
 - [ ] CPU Utilization of an EC2 instance.
-- [x] Disk usage activity of an EC2 instance.
+- [ ] Disk usage activity of an EC2 instance.
+
+![alt text](image-271.png)
+
 - [ ] Data transfer of an EC2 instance.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -5225,6 +5240,8 @@ Border Gateway Protocol (BGP)
 - [ ] Use EMR and write a custom script to retrieve data from DynamoDB in the current region using a SCAN operation and push it to DynamoDB in the second region.
 - [ ] Use AWS data Pipeline to schedule an export of the DynamoDB table to S3 in the current region once a day, then schedule another task immediately after it that will import data from S3 to DynamoDB in the other region.
 - [ ] Send also each item into an SQS queue in the second region; use an auto-scaling group behind the SQS queue to replay the write in the second region.
+
+![alt text](image-272.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
