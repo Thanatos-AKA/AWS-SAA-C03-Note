@@ -5649,19 +5649,10 @@ Border Gateway Protocol (BGP)
 
 ### What does the 'Server Side Encryption' option on Amazon S3 provide?
 
-- [x] It provides an encrypted virtual disk in the Cloud.
+- [ ] It provides an encrypted virtual disk in the Cloud.
 - [ ] It doesn't exist for Amazon S3, but only for Amazon EC2.
-- [ ] It encrypts the files that you send to Amazon S3, on the server side.
+- [x] It encrypts the files that you send to Amazon S3, on the server side.
 - [ ] It allows to upload fi les using an SSL endpoint, for a secure transfer.
-
-**[⬆ Back to Top](#table-of-contents)**
-
-### What is a placement group?
-
-- [ ] A collection of Auto Scaling groups in the same region.
-- [x] A feature that enables EC2 instances to interact with each other via high bandwidth, low latency connections.
-- [ ] A collection of authorized CloudFront edge locations for a distribution.
-- [ ] A collection of Elastic Load Balancers in the same Region or Availability Zone.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5671,6 +5662,8 @@ Border Gateway Protocol (BGP)
 - [ ] acknowledgement from the storage subsystem.
 - [x] average queue length.
 - [ ] time it takes for the I/O operation to complete.
+
+![alt text](image-301.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5689,6 +5682,8 @@ Border Gateway Protocol (BGP)
 - [x] Private address IP 10.201.31.6 is currently assigned to another interface.
 - [ ] Private IP address 10.201.31.6 is not part of the associated subnet's IP address range.
 - [ ] Private IP address 10.201.31.6 is reserved by Amazon for IP networking purposes.
+
+![alt text](image-302.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
