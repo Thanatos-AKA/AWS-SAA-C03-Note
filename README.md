@@ -2,6 +2,8 @@
 
 ![alt text](image-17.png)
 
+![alt text](image-309.png)
+
 | No. | Questions |
 | --- | --------- |
 | 1   | [Which set of Amazon S3 features helps to prevent and recover from accidental data loss?](#which-set-of-amazon-s3-features-helps-to-prevent-and-recover-from-accidental-data-loss)
@@ -5699,9 +5701,9 @@ Border Gateway Protocol (BGP)
 ### Is creating a Read Replica of another Read Replica supported?
 
 - [ ] Only in VPC.
-- [ ] Yes.
+- [X] Yes.
 - [ ] Only in certain regions.
-- [x] No.
+- [ ] No.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5730,14 +5732,18 @@ Border Gateway Protocol (BGP)
 - [ ] I/O operations will be functioning normally.
 - [x] I/O operations to the database are suspended for a few minutes while the backup is in progress.
 
+![alt text](image-303.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### When an EC2 EBS-backed (EBS root) instance is stopped, what happens to the data on any ephemeral store volumes?
 
 - [ ] Data is automatically saved in an EBS volume.
-- [x] Data is unavailable until the instance is restarted.
-- [ ] Data will be deleted and will no longer be accessible.
+- [ ] Data is unavailable until the instance is restarted.
+- [x] Data will be deleted and will no longer be accessible.
 - [ ] Data is automatically saved as an EBS snapshot.
+
+![alt text](image-304.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5753,6 +5759,9 @@ Border Gateway Protocol (BGP)
 ### A favored client needs you to quickly deploy a database that is a relational database service with minimal administration as he wants to spend the least amount of time administering it. Which database would be the best option?
 
 - [ ] Amazon SimpleDB.
+
+![alt text](image-305.png)
+
 - [ ] Your choice of relational AMIs on Amazon EC2 and EB.
 - [x] Amazon RDS.
 - [ ] Amazon Redshift.
@@ -5765,6 +5774,8 @@ Border Gateway Protocol (BGP)
 - [ ] Amazon SQS is for single-threaded sending or receiving speeds.
 - [ ] Amazon SQS is a non-distributed queuing system.
 - [ ] Amazon SQS is a distributed queuing system that is optimized for vertical scalability and for single-threaded sending or receiving speeds.
+
+![alt text](image-306.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5784,14 +5795,7 @@ Border Gateway Protocol (BGP)
 - [ ] Attaching a second Elastic Network Interface (EN I) to the NAT instance, and placing it in the private subnet.
 - [ ] Attaching a second Elastic Network Interface (ENI) to the instance in the private subnet, and placing it in the public subnet.
 
-**[⬆ Back to Top](#table-of-contents)**
-
-### Which of the following would you use to list your AWS Import/Export jobs?
-
-- [ ] Amazon RDS.
-- [ ] AWS Import/Export Web Service Tool.
-- [x] Amazon S3 REST API.
-- [ ] AWS Elastic Beanstalk.
+![alt text](image-307.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5811,6 +5815,8 @@ Border Gateway Protocol (BGP)
 - [ ] storage-exceed.
 - [ ] storage-overage.
 
+![alt text](image-308.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Your application is using an ELB in front of an Auto Scaling group of web/application servers deployed across two AZs and a Multi-AZ RDS Instance for data persistence. The database CPU is often above 80% usage and 90% of I/O operations on the database are reads. To improve performance you recently added a single-node Memcached ElastiCache Cluster to cache frequent DB query results. In the next weeks the overall workload is expected to grow by 30%. Do you need to change anything in the architecture to maintain the high availability of the application with the anticipated additional load? Why?
@@ -5826,8 +5832,8 @@ Border Gateway Protocol (BGP)
 
 - [ ] 1 Elastic IP.
 - [ ] 3 Elastic IP.
-- [ ] 5 Elastic IP.
-- [x] 0 Elastic IP.
+- [x] 5 Elastic IP.
+- [ ] 0 Elastic IP.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5837,6 +5843,8 @@ Border Gateway Protocol (BGP)
 - [ ] Using traceroute.
 - [ ] Using ipconfig.
 - [x] Using instance metadata.
+
+![alt text](image-310.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5852,11 +5860,16 @@ Border Gateway Protocol (BGP)
 ### You are designing a connectivity solution between on-premises infrastructure and Amazon VPC. Your servers on-premises will be communicating with your VPC instances. You will be establishing IPSec tunnels over the internet. You will be using VPN gateways and terminating the IPsec tunnels on AWS supported customer gateways. Which of the following objectives would you achieve by implementing an IPSec tunnel as outlined above? (Choose 4 answers)
 
 - [ ] End-to-end protection of data in transit.
+
+![alt text](image-311.png)
+
 - [ ] End-to-end Identity authentication.
 - [x] Data encryption across the Internet.
 - [x] Protection of data in transit over the Internet.
 - [x] Peer identity authentication between VPN gateway and customer gateway.
 - [x] Data integrity protection across the Internet.
+
+![alt text](image-312.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5899,6 +5912,9 @@ Border Gateway Protocol (BGP)
 ### You are the new IT architect in a company that operates a mobile sleep tracking application. When activated at night, the mobile app is sending collected data points of 1 kilobyte every 5 minutes to your backend. The backend takes care of authenticating the user and writing the data points into an Amazon DynamoDB table. Every morning, you scan the table to extract and aggregate last night's data on a per user basis, and store the results in Amazon S3. Users are notified via Amazon SNS mobile push notifications that new data is available, which is parsed and visualized by the mobile app. Currently you have around 100k users who are mostly based out of North America. You have been tasked to optimize the architecture of the backend system to lower cost. What would you recommend? (Choose 2 answers)
 
 - [x] Create a new Amazon DynamoDB table each day and drop the one for the previous day after its data is on Amazon S3.
+
+![alt text](image-313.png)
+
 - [ ] Have the mobile app access Amazon DynamoDB directly instead of JSON files stored on Amazon S3.
 - [x] Introduce an Amazon SQS queue to buffer writes to the Amazon DynamoDB table and reduce provisioned write throughput.
 - [ ] Introduce Amazon Elasticache to cache reads from the Amazon DynamoDB table and reduce provisioned read throughput.
@@ -5913,6 +5929,12 @@ Border Gateway Protocol (BGP)
 - [ ] The route table for the subnets containing the affected EC2 instances is not configured to direct network traffic for the software update locations to the proxy.
 - [ ] You have not allocated enough storage to the EC2 instance running the proxy so the network buffer is filling up, causing some requests to fail.
 - [ ] You are running the proxy in a public subnet but have not allocated enough EIPs to support the needed network throughput through the Internet Gateway (IGW).
+
+![alt text](image-314.png)
+
+![alt text](image-316.png)
+
+![alt text](image-315.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5929,8 +5951,8 @@ Border Gateway Protocol (BGP)
 
 - [ ] The ability to setup Autoscaling for Amazon EC2 instances.
 - [ ] None of these.
-- [ ] A templated resource creation for Amazon Web Services.
-- [x] A template to map network resources for Amazon Web Services.
+- [x] A templated resource creation for Amazon Web Services.
+- [ ] A template to map network resources for Amazon Web Services.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5941,14 +5963,18 @@ Border Gateway Protocol (BGP)
 - [ ] The S3 bucket has reached the maximum number of objects allowed.
 - [ ] You are in the wrong Availability Zone.
 
+![alt text](image-317.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### When creation of an EBS snapshot is initiated, but not completed, the EBS volume?
 
-- [ ] Can be used while the snapshot is in progress.
+- [x] Can be used while the snapshot is in progress.
 - [ ] Cannot be detached or attached to an EC2 instance until the snapshot completes.
 - [ ] Can be used in read-only mode while the snapshot is in progress.
-- [x] Cannot be used until the snapshot completes.
+- [ ] Cannot be used until the snapshot completes.
+
+![alt text](image-319.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -5975,6 +6001,8 @@ Border Gateway Protocol (BGP)
 - [ ] if configured to can.
 - [ ] will never.
 - [x] will.
+
+![alt text](image-320.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6029,6 +6057,8 @@ Border Gateway Protocol (BGP)
 - [ ] It supports only MX records.
 - [x] Yes, it supports Name Server records.
 
+![alt text](image-321.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Your web application front end consists of multiple EC2 instances behind an Elastic Load Balancer. You configured ELB to perform health checks on these EC2 instances, if an instance fails to pass health checks, which statement will be true?
@@ -6047,6 +6077,8 @@ Border Gateway Protocol (BGP)
 - [ ] All the instances of George and Ray can communicate over a private IP without any cost.
 - [ ] The instances of George and Ray will be running in the same data centre.
 
+![alt text](image-322.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Once again your customers are concerned about the security of their sensitive data and with their latest enquiry ask about what happens to old storage devices on AWS. What would be the best answer to this question?
@@ -6056,6 +6088,8 @@ Border Gateway Protocol (BGP)
 - [ ] AWS uses their own proprietary software to destroy data as part of the decommissioning process.
 - [ ] AWS uses a 3rd party security organization to destroy data as part of the decommissioning process.
 
+![alt text](image-323.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Which of the following are characteristics of Amazon VPC subnets? (Choose 2 answers)
@@ -6063,8 +6097,11 @@ Border Gateway Protocol (BGP)
 - [ ] Each subnet spans at least 2 Availability Zones to provide a high-availability environment.
 - [x] Each subnet maps to a single Availability Zone.
 - [ ] CIDR block mask of/25 is the smallest range supported.
-- [ ] By default, all subnets can route between each other, whether they are private or public.
-- [x] Instances in a private subnet can communicate with the Internet only if they have an Elastic IP.
+- [X] By default, all subnets can route between each other, whether they are private or public.
+
+![alt text](image-324.png)
+
+- [ ] Instances in a private subnet can communicate with the Internet only if they have an Elastic IP.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6075,14 +6112,21 @@ Border Gateway Protocol (BGP)
 - [ ] VPC Addresses.
 - [x] EC2 Addresses.
 
+![alt text](image-325.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
-### You are designing a data leak prevention solution for your VPC environment. You want your VPC Instances to be able to access software depots and distributions on the Internet for product updates. The depots and distributions are accessible via third party CONs by their URLs. You want to explicitly deny any other outbound connections from your VPC instances to hosts on the internet. Which of the following options would you consider?
+### You are designing a data leak prevention solution for your VPC environment. You want your VPC Instances to be able to access software depots and distributions on the Internet for product updates. The depots and distributions are accessible via third party CDNs by their URLs. You want to explicitly deny any other outbound connections from your VPC instances to hosts on the internet. Which of the following options would you consider?
 
 - [x] Configure a web proxy server in your VPC and enforce URL-based ru les for outbound access Remove default routes.
+
+![alt text](image-326.png)
+
 - [ ] Implement security groups and configure outbound rules to only permit traffic to software depots.
 - [ ] Move all your instances into private VPC subnets remove default routes from all routing tables and add specific routes to the software depots and distributions only.
 - [ ] Implement network access control lists to all specific destinations, with an Implicit deny as a rule.
+
+![alt text](image-327.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6097,10 +6141,12 @@ Border Gateway Protocol (BGP)
 
 ### A user is sending bulk emails using AWS SES. The emails are not reaching some of the targeted audience because they are not authorized by the ISPs. How can the user ensure that the emails are all delivered?
 
-- [x] Send an email using DKIM with SE.
-- [ ] Send an email using SMTP with SE.
+- [x] Send an email using DKIM with SES.
+- [ ] Send an email using SMTP with SES.
 - [ ] Open a ticket with AWS support to get it authorized with the IS.
 - [ ] Authorize the ISP by sending emails from the development account.
+
+![alt text](image-328.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6110,6 +6156,8 @@ Border Gateway Protocol (BGP)
 - [ ] None of these.
 - [ ] Elastic Computer Usage.
 - [x] Elastic Compute Unit.
+
+![alt text](image-329.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6126,11 +6174,14 @@ Border Gateway Protocol (BGP)
 
 ### Which procedure for backing up a relational database on EC2 that is using a set of RAIDed EBS volumes for storage minimizes the time during which the database cannot be written to and results in a consistent backup?
 
-- [x] 1. Detach EBS volumes, 2. Start EBS snapshot of volumes, 3. Re-attach EBS volumes.
+- [ ] 1. Detach EBS volumes, 2. Start EBS snapshot of volumes, 3. Re-attach EBS volumes.
+
+![alt text](image-330.png)
+
 - [ ] 1. Stop the EC2 Instance. 2. Snapshot the EBS volumes.
-- [ ] 1. Suspend disk 1/0, 2. Create an image of the EC2 Instance, 3. Resume disk 1/0.
-- [ ] 1. Suspend disk 1/0, 2. Start EBS snapshot of volumes, 3. Resume disk 1/0.
-- [ ] 1. Suspend disk 1/0, 2. Start EBS snapshot of volumes, 3. Wait for snapshots to complete, 4. Resume disk 1/0.
+- [ ] 1. Suspend disk I/O, 2. Create an image of the EC2 Instance, 3. Resume disk I/O.
+- [x] 1. Suspend disk I/O, 2. Start EBS snapshot of volumes, 3. Resume disk I/O.
+- [ ] 1. Suspend disk I/O, 2. Start EBS snapshot of volumes, 3. Wait for snapshots to complete, 4. Resume disk I/O.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6141,6 +6192,8 @@ Border Gateway Protocol (BGP)
 - [ ] The instance should be deployed to Single AZ and then moved to Multi-AZ once again.
 - [ ] You will need to delete the DB Instance and create a new one to replace it.
 
+![alt text](image-331.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are setting up some IAM user policies and have also become aware that some services support resource-based permissions, which let you attach policies to the service's resources instead of to IAM users or groups. Which of the below statements is true in regards to resource-level permissions?
@@ -6150,6 +6203,9 @@ Border Gateway Protocol (BGP)
 - [ ] All services support resource-level permissions only for some actions.
 - [x] Some services support resource-level permissions only for some actions.
 
+![alt text](image-332.png)
+
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You have some very sensitive data stored on AWS S3 and want to try every possible alternative to keeping it secure in regards to access control. What are the mechanisms available for access control on AWS S3?
@@ -6158,6 +6214,8 @@ Border Gateway Protocol (BGP)
 - [ ] (IAM) policies, Access Control Lists (ACLs) and bucket policies.
 - [ ] Access Control Lists (ACLs), bucket policies, and query string authentication.
 - [ ] (IAM) policies, Access Control Lists (ACLs), bucket policies, query string authentication and encryption.
+
+![alt text](image-333.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6174,17 +6232,24 @@ Border Gateway Protocol (BGP)
 
 - [ ] VPC with a Single Public Subnet Only.
 - [x] VPC with a Public Subnet Only and Hardware VPN Access.
+
+![alt text](image-335.png)
+
 - [ ] VPC with Public and Private Subnets and Hardware VPN Access.
 - [ ] VPC with a Private Subnet Only and Hardware VPN Access.
+
+![alt text](image-334.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### True or False: A VPC contains multiple subnets, where each subnet can span multiple Availability Zones.
 
 - [ ] This is true only if requested during the set-up of VPC.
-- [x] This is true.
-- [ ] This is false.
+- [ ] This is true.
+- [x] This is false.
 - [ ] This is true only for US regions.
+
+![alt text](image-336.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6238,23 +6303,27 @@ Border Gateway Protocol (BGP)
 - [ ] Pay for the instances that you use by the hour, with long-term commitments or up-front payments.
 - [ ] Make a high, one-time, all-front payment for an instance, reserve it for a one- or three-year term, and pay a significantly higher hourly rate for these instances.
 
+![alt text](image-337.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### When will you incur costs with an Elastic IP address (EIP)?
 
 - [ ] When an EIP is allocated.
 - [ ] When it is allocated and associated with a running instance.
-- [ ] When it is allocated and associated with a stopped instance.
-- [x] Costs are incurred regardless of whether the ElP is associated with a running instance.
+- [X] When it is allocated and associated with a stopped instance.
+- [ ] Costs are incurred regardless of whether the ElP is associated with a running instance.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### IAM provides several policy templates you can use to automatically assign permissions to the groups you create. The [...] policy template gives the Admins group permission to access all account resources, except your AWS account information.
 
 - [ ] Read Only Access.
-- [ ] Power User Access.
+- [x] Power User Access.
 - [ ] AWS Cloud Formation Read Only Access.
-- [x] Administrator Access.
+- [ ] Administrator Access.
+
+![alt text](image-338.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6267,21 +6336,16 @@ Border Gateway Protocol (BGP)
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Can I change the EC2 security groups after an instance is launched in EC2-Classic?
-
-- [ ] Yes, you can change security groups after you launch an instance in EC2-Classic.
-- [x] No, you cannot change security groups after you launch an instance in EC2-Classic.
-- [ ] Yes, you can only when you remove rules from a security group.
-- [ ] Yes, you can only when you add rules to a security group.
-
-**[⬆ Back to Top](#table-of-contents)**
-
 ### Please select the Amazon EC2 resource which cannot be tagged.
 
 - [ ] Images (AMIs, kernels, RAM disks).
 - [ ] Amazon EBS volumes.
-- [x] Elastic IP addresses.
+- [ ] Elastic IP addresses.
 - [ ] VPCs.
+
+![alt text](image-339.png)
+
+![alt text](image-340.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6291,6 +6355,8 @@ Border Gateway Protocol (BGP)
 - [ ] It supports CNAME records, but not MX records.
 - [ ] No.
 - [ ] Only Primary MX records. Secondary MX records are not supported.
+
+![alt text](image-341.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6307,9 +6373,17 @@ Border Gateway Protocol (BGP)
 ### AWS Identity and Access Management is a web service that enables Amazon Web Services (AWS) customers to manage users and user permissions in AWS. In addition to supporting IAM user policies, some services support resource-based permissions. Which of the following services are supported by resource-based permissions?
 
 - [ ] Amazon SNS, and Amazon SQS and AWS Direct Connect.
+
+![alt text](image-342.png)
+
 - [ ] Amazon S3 and Amazon SQS and Amazon ElastiCache.
+
+![alt text](image-343.png)
+
 - [x] Amazon S3, Amazon SNS, Amazon SQS, Amazon Glacier and Amazon EB
 - [ ] Amazon Glacier, Amazon SNS, and Amazon CloudWatch.
+
+![alt text](image-344.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6335,8 +6409,10 @@ Border Gateway Protocol (BGP)
 
 - [ ] Yes, it can have for a maximum of three different TLDs.
 - [ ] Yes.
-- [x] Yes, it can have depending on the TL.
-- [ ] No.
+- [ ] Yes, it can have depending on the TL.
+- [x] No.
+
+![alt text](image-345.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6411,6 +6487,10 @@ Border Gateway Protocol (BGP)
 - [ ] 4.
 - [ ] As many as you need.
 
+![alt text](image-347.png)
+
+![alt text](image-346.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### True or False: in Amazon Route 53, you can create a hosted zone for a top-level domain (TLD).
@@ -6420,14 +6500,7 @@ Border Gateway Protocol (BGP)
 - [ ] True, only if you send an XML document with a CreateHostedZoneRequest element for TLD.
 - [ ] True.
 
-**[⬆ Back to Top](#table-of-contents)**
-
-### You want to use AWS Import/Export to send data from your S3 bucket to several of your branch offices. What should you do if you want to send 10 storage units to AWS?
-
-- [ ] Make sure your disks are encrypted prior to shipping.
-- [ ] Make sure you format your disks prior to shipping.
-- [ ] Make sure your disks are 1TB or more.
-- [x] Make sure you submit a separate job request for each device.
+![alt text](image-348.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
