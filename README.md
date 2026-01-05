@@ -6560,19 +6560,32 @@ Border Gateway Protocol (BGP)
 ### Which technique can be used to integrate AWS IAM (Identity and Access Management) with an on-premise LDAP (Lightweight Directory Access Protocol) directory service?
 
 - [ ] Use an IAM policy that references the LDAP account identifiers and the AWS credentials.
+
+![alt text](image-349.png)
+
 - [x] Use SAML (Security Assertion Markup Language) to enable single sign-on between AWS and LDAP.
 - [ ] Use AWS Security Token Service from an identity broker to issue short-lived AWS credentials.
+
+![alt text](image-350.png)
+
 - [ ] Use IAM roles to automatically rotate the IAM credentials when LDAP credentials are updated.
 - [ ] Use the LDAP credentials to restrict a group of users from launching specific EC2 instance types.
+
+![alt text](image-351.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are building a solution for a customer to extend their on-premises data center to AWS. The customer requires a 50-Mbps dedicated and private connection to their VPC. Which AWS product or feature satisfies this requirement?
 
 - [ ] Amazon VPC peering.
+
+![alt text](image-352.png)
+
 - [ ] Elastic IP Addresses.
 - [x] AWS Direct Connect.
 - [ ] Amazon VPC virtual private gateway.
+
+![alt text](image-353.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6582,6 +6595,8 @@ Border Gateway Protocol (BGP)
 - [ ] A custom bucket policy limited to the Amazon S3 API in 'company-backup'.
 - [ ] A custom IAM user policy limited to the Amazon S3 API for the Amazon Glacier archive 'company backup'.
 - [x] A custom IAM user policy limited to the Amazon S3 API in 'company-backup'.
+
+![alt text](image-354.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6605,13 +6620,19 @@ Border Gateway Protocol (BGP)
 
 ### Refer to the architecture diagram above of a batch processing solution using Simple Queue Service (SQS) to set up a message queue between EC2 instances which are used as batch processors Cloud Watch monitors the number of Job requests (queued messages) and an Auto Scaling group adds or deletes batch servers automatically based on parameters set in Cloud Watch alarms. You can use this architecture to implement which of the following features in a cost effective and efficient manner?
 
-![Question 563](images/question563.jpg)
-
 - [ ] Reduce the overall lime for executing jobs through parallel processing by allowing a busy EC2 instance that receives a message to pass it to the next instance in a daisy-chain setup.
+
+![alt text](image-357.png)
+
 - [ ] Implement fault tolerance against EC2 instance failure since messages would remain in SQS and worn can continue with recovery of EC2 instances implement fault tolerance against SQS failure by backing up messages to S3.
-- [x] Implement message passing between EC2 instances within a batch by exchanging messages through SQS.
-- [ ] Coordinate number of EC2 instances with number of job requests automatically thus Improving cost effectiveness.
+- [ ] Implement message passing between EC2 instances within a batch by exchanging messages through SQS.
+
+![alt text](image-356.png)
+
+- [x] Coordinate number of EC2 instances with number of job requests automatically thus Improving cost effectiveness.
 - [ ] Handle high priority jobs before lower priority jobs by assigning a priority metadata fie ld to SQS messages.
+
+![alt text](image-355.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6647,6 +6668,9 @@ Border Gateway Protocol (BGP)
 - [ ] Amazon S3 server-side encryption employs strong multi-factor encryption.
 - [ ] Amazon S3 server-side encryption uses one of the strongest block ciphers available, 256-bit Advanced Encryption Standard (AES-256), to encrypt your data.
 - [x] In server-side encryption, you manage encryption/decryption of your data, the encryption keys, and related tools.
+
+![alt text](image-358.png)
+
 - [ ] Server-side encryption is about data encryption at rest―that is, Amazon S3 encrypts your data as it writes it to disks.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -6712,14 +6736,18 @@ Border Gateway Protocol (BGP)
 - [ ] Configure your backup software to use Glacier as the target for your data backups.
 - [ ] Use Storage Gateway and configure it to use Gateway Stored volumes.
 
+![alt text](image-359.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### What happens to Amazon EBS root device volumes, by default, when an instance terminates?
 
 - [ ] Amazon EBS root device volumes are moved to IA
-- [x] Amazon EBS root device volumes are copied into Amazon RD
-- [ ] Amazon EBS root device volumes are automatically deleted.
+- [ ] Amazon EBS root device volumes are copied into Amazon RD
+- [x] Amazon EBS root device volumes are automatically deleted.
 - [ ] Amazon EBS root device volumes remain in the database until you delete them.
+
+![alt text](image-360.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6729,6 +6757,8 @@ Border Gateway Protocol (BGP)
 - [x] Push web clicks by session to Amazon Kinesis and analyze behavior using Kinesis workers.
 - [ ] Write click events directly to Amazon Redshift and then analyze with SQL.
 - [ ] Publish web clicks by session to an Amazon SQS queue men periodically drain these events to Amazon RDS and analyze with SQL.
+
+![alt text](image-361.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6744,9 +6774,14 @@ Border Gateway Protocol (BGP)
 ### A company needs to deploy virtual desktops to its customers in a virtual private cloud, leveraging existing security controls. Which set of AWS services and features will meet the company's requirements?
 
 - [ ] Virtual Private Network connection. AWS Directory Services, and Classic link.
-- [ ] Virtual Private Network connection. AWS Di rectory Services, and Amazon Workspaces.
-- [x] AWS Directory Service, Amazon Workspaces, and AWS Identity and Access Management.
+- [x] Virtual Private Network connection. AWS Directory Services, and Amazon Workspaces.
+
+![alt text](image-362.png)
+
+- [ ] AWS Directory Service, Amazon Workspaces, and AWS Identity and Access Management.
 - [ ] Amazon Elastic Compute Cloud, and AWS Identity and Access Management.
+
+![alt text](image-363.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6756,6 +6791,10 @@ Border Gateway Protocol (BGP)
 - [ ] Set up one ELB for all platforms to distribute load among multiple instances under it. Each EC2 instance implements all functionality for a particular platform.
 - [ ] Set up two ELBs. The first ELB handles SSL certificates for all platforms and the second ELB handles session stickiness for all platforms. For each ELB, run separate EC2 instance groups to handle the web application for each platform.
 - [x] Assign multiple ELBs to an EC2 instance or group of EC2 instances running the common components of the web application, one ELB for each platform type. Session stickiness and SSL termination are done at the ELBs.
+
+![alt text](image-364.png)
+
+![alt text](image-366.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
