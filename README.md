@@ -6828,9 +6828,11 @@ Border Gateway Protocol (BGP)
 ### A web design company currently runs several FTP servers that their 250 customers use to upload and download large graphic files. They wish to move this system to AWS to make it more scalable, but they wish to maintain customer privacy and keep costs to a minimum. What AWS architecture would you recommend?
 
 - [x] Ask their customers to use an S3 client instead of an FTP client. Create a single S3 bucket. Create an IAM user for each customer. Put the IAM Users in a Group that has an IAM policy that permits access to sub-directories within the bucket via use of the 'username' Policy variable.
-- [ ] Create a single S3 bucket with Reduced Redundancy Storage turned on and ask their customers to use an S3 client instead of an FTP client. Create a bucket for each customer with a Bucket Policy that permits access only to that one customer.
+- [ ] Create a single S3 bucket with Reduced Redundancy Storage turned on and ask their customers to use an S3 client instead of an FTP client. Create a bucket for each customer with a Bucket Policy that permits access only to that one customer.ㄍ
 - [ ] Create an auto-scaling group of FTP servers with a scaling policy to automatically scale-in when minimum network traffic on the auto-scaling group is below a given threshold. Load a central list of ftp users from S3 as part of the user Data startup script on each Instance.
 - [ ] Create a single S3 bucket with Requester Pays turned on and ask their customers to use an S3 client instead of an FTP client. Create a bucket for each customer with a Bucket Policy that permits access only to that one customer.
+
+![alt text](image-367.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6852,15 +6854,6 @@ Border Gateway Protocol (BGP)
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### Prior to the introduction of this function, the HA feature provided redundancy and performance, but required that a failed/lost group member be [...] reinstated.
-
-- [ ] automatically.
-- [ ] periodically.
-- [x] manually.
-- [ ] continuously.
-
-**[⬆ Back to Top](#table-of-contents)**
-
 ### A company has a workflow that sends video files from their on-premise system to AWS for transcoding. They use EC2 worker instances that pull transcoding jobs from SQS. Why is SQS an appropriate service for this scenario?
 
 - [ ] SQS guarantees the order of the messages.
@@ -6877,14 +6870,18 @@ Border Gateway Protocol (BGP)
 - [ ] Only default thresholds can be set you can't choose your own thresholds.
 - [ ] Set a target value and choose whether the alarm will trigger when the value hits this threshold.
 
+![alt text](image-368.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### You are designing a web application that stores static assets in an Amazon Simple Storage Service (S3) bucket. You expect this bucket to immediately receive over 150 PUT requests per second. What should you do to ensure optimal performance?
 
-- [x] Use multi-part upload.
+- [ ] Use multi-part upload.
 - [ ] Add a random prefix to the key names.
-- [ ] Amazon S3 will automatically manage performance at this scale.
+- [x] Amazon S3 will automatically manage performance at this scale.
 - [ ] Use a predictable naming scheme, such as sequential numbers or date time sequences, in the key names.
+
+![alt text](image-369.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6899,10 +6896,10 @@ Border Gateway Protocol (BGP)
 
 ### A customer has a single 3-TB volume on-premises that is used to hold a large repository of images and print layout files. This repository is growing at 500 GB a year and must be presented as a single logical volume. The customer is becoming increasingly constrained with their local storage capacity and wants an off-site backup of this data, while maintaining low-latency access to their frequently accessed data. Which AWS Storage Gateway configuration meets the customer requirements?
 
-- [ ] Gateway-Cached volumes with snapshots scheduled to Amazon S3.
+- [x] Gateway-Cached volumes with snapshots scheduled to Amazon S3.
 - [ ] Gateway-Stored volumes with snapshots scheduled to Amazon S3.
 - [ ] Gateway-Virtual Tape Library with snapshots to Amazon S3.
-- [x] Gateway-Virtual Tape Library with snapshots to Amazon Glacier.
+- [ ] Gateway-Virtual Tape Library with snapshots to Amazon Glacier.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6912,6 +6909,8 @@ Border Gateway Protocol (BGP)
 - [x] It supports an unlimited number of queues and unlimited number of messages per queue for each user but automatically deletes messages that have been in the queue for more than 4 days.
 - [ ] It supports an unlimited number of queues but a limited number of messages per queue for each user but automatically deletes messages that have been in the queue for more than 4 days.
 - [ ] It supports an unlimited number of queues and unlimited number of messages per queue for each user but automatically deletes messages that have been in the queue for more than 4 weeks.
+
+![alt text](image-370.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6939,6 +6938,8 @@ Border Gateway Protocol (BGP)
 - [ ] It can Import to Amazon Glacier.
 - [x] It can export from Amazon Glacier.
 - [ ] It can Import to Amazon EBS.
+
+![alt text](image-371.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -6974,13 +6975,21 @@ Border Gateway Protocol (BGP)
 - [ ] AWS Direct Connect.
 - [x] Amazon EMR.
 
+![alt text](image-372.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### Your team has a tomcat-based Java application you need to deploy into development, test and production environments. After some research, you opt to use Elastic Beanstalk due to its tight integration with your developer tools and RDS due to its ease of management. Your QA team lead points out that you need to roll a sanitized set of production data into your environment on a nightly basis. Similarly, other software teams in your org want access to that same restored data via their EC2 instances in your VPC. The optimal setup for persistence and security that meets the above requirements would be the following:
 
-- [x] Create your RDS instance as part of your Elastic Beanstalk definition and alter its security group to allow access to it from hosts in your application subnets.
+- [ ] Create your RDS instance as part of your Elastic Beanstalk definition and alter its security group to allow access to it from hosts in your application subnets.
+
+![alt text](image-374.png)
+
 - [ ] Create your RDS instance separately and add its IP address to your application's DB connection strings in your code Alter its security group to allow access to it from hosts within your VPC's IP address block.
-- [ ] Create your RDS instance separately and pass its DNS name to your app's DB connection string as an environment variable. Create a security group for client machines and add it as a valid source for DB traffic to the security group of the RDS instance itself.
+
+![alt text](image-373.png)
+
+- [x] Create your RDS instance separately and pass its DNS name to your app's DB connection string as an environment variable. Create a security group for client machines and add it as a valid source for DB traffic to the security group of the RDS instance itself.
 - [ ] Create your RDS instance separately and pass its DNS name to your's DB connection string as an environment variable Alter its security group to allow access to It from hosts in your application subnets.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -6988,7 +6997,13 @@ Border Gateway Protocol (BGP)
 ### What are characteristics of Amazon S3? (Choose 2 answers)
 
 - [ ] Amazon S3 allows you to store objects of virtually unlimited size.
+
+![alt text](image-375.png)
+
 - [ ] Amazon S3 offers Provisioned IOP.
+
+![alt text](image-376.png)
+
 - [x] Amazon S3 allows you to store unlimited amounts of data.
 - [ ] Amazon S3 should be used to host a relational database.
 - [x] Objects are directly accessible via a URL.
@@ -7038,6 +7053,8 @@ Border Gateway Protocol (BGP)
 - [x] 2.
 - [ ] 1.
 
+![alt text](image-377.png)
+
 **[⬆ Back to Top](#table-of-contents)**
 
 ### SQL Server [...] store log ins and passwords in the master database.
@@ -7051,6 +7068,9 @@ Border Gateway Protocol (BGP)
 ### You are using an m1.small EC2 Instance with one 300GB EBS volume to host a relational database. You determined that write throughput to the database needs to be increased. Which of the following approaches can help achieve this? (Choose 2 answers)
 
 - [x] Use an array of EBS volumes.
+
+![alt text](image-378.png)
+
 - [ ] Enable Multi-AZ mode.
 - [ ] Place the instance in an Auto Scaling Groups.
 - [ ] Add an EBS volume and place into RAID 5.
@@ -7083,6 +7103,8 @@ Border Gateway Protocol (BGP)
 - [x] No.
 - [ ] Only for high-performance EBS volumes.
 - [ ] Only when the instances are located in the US regions.
+
+![alt text](image-379.png)
 
 **[⬆ Back to Top](#table-of-contents)**
 
